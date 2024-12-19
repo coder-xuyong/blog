@@ -3,9 +3,10 @@ home: true
 layout: BlogHome
 icon: home
 title: 博客主页
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+# heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: 银河战舰
-heroFullScreen: true
+heroFullScreen: false # banner 是否全屏
+bgImage: https://www.yuanshen.com/images/poster.948ee40e.jpg
 tagline: 天若有情天亦老，人间正道是沧桑
 projects:
   - icon: project
