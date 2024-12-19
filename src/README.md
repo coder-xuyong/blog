@@ -5,7 +5,7 @@ icon: home
 title: 博客主页
 # heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: 枫原万叶
-heroFullScreen: true # banner 是否全屏
+heroFullScreen: false # banner 是否全屏
 bgImage: https://www.yuanshen.com/images/poster.948ee40e.jpg
 tagline: 天高散孤云 落日澄空故乡影 飘摇游子心
 projects:
