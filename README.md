@@ -1,3 +1,9 @@
+# 项目启动命令
+```shell
+npm install 
+npm run docs:dev
+```
+
 # github pages 使用
 访问：https://pages.github.com/ 查看详细攻略
 # 使用 vuepress
@@ -47,3 +53,4 @@ added 766 packages in 41s
 success VuePress webpack dev server is listening at http://localhost:8080/
 webpack compiled successfully
 ```
+
