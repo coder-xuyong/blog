@@ -8,6 +8,8 @@ npm run docs:dev
 访问：https://pages.github.com/ 查看详细攻略
 # 使用 vuepress
 访问：https://theme-hope.vuejs.press/zh/get-started/
+# 参考视频
+访问：https://www.bilibili.com/video/BV16Z4heUEgi/?spm_id_from=333.1391.0.0&vd_source=963c8f327c417497fa7a2e119c546395
 其中创建项目的流程如下：
 ```shell
 E:\workspace\vsocde>npm init vuepress-theme-hope@latest blog
