@@ -2,42 +2,44 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
-# heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: 枫原万叶
+title: 主页
+# heroImage: /assets/images/banner.png
+heroText: coder-xuyong
 heroFullScreen: false # banner 是否全屏
-bgImage: https://www.yuanshen.com/images/poster.948ee40e.jpg
+bgImage: /assets/images/banner.jpg
 tagline: 天高散孤云 落日澄空故乡影 飘摇游子心
+
+
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目链接
+    name: blog
+    desc: 日常记录知识点的个人博客
+    link: https://github.com/coder-xuyong/blog
 
-  - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+  # - icon: link
+  #   name: 链接名称
+  #   desc: 链接详细描述
+  #   link: https://链接地址
 
-  - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
-    link: https://你的书籍链接
+  # - icon: book
+  #   name: 书籍名称
+  #   desc: 书籍详细描述
+  #   link: https://你的书籍链接
 
   - icon: article
-    name: 文章名称
-    desc: 文章详细描述
-    link: https://你的文章链接
+    name: 无须服务器，搭建一个在线blog
+    desc: 使用 GitHub pages + vuepress 搭建静态blog
+    link: https://github.com/coder-xuyong/blog/blob/main/README.md
 
-  - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+  # - icon: friend
+  #   name: 伙伴名称
+  #   desc: 伙伴详细介绍
+  #   link: https://你的伙伴链接
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
+  # - icon: https://theme-hope-assets.vuejs.press/logo.svg
+  #   name: 自定义项目
+  #   desc: 自定义详细介绍
+  #   link: https://你的自定义链接
 
 footer: 自定义你的页脚文字 getDate(1609459200000)
 ---

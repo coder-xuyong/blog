@@ -1,16 +1,16 @@
 ---
 # 这是文章的标题
-title: 页面配置
+title: 页面配置说明
 # 你可以自定义封面图片
-cover: /assets/images/cover1.jpg
+cover: /assets/images/blogs/page1.png
 # 这是页面的图标
 icon: file
 # 这是侧边栏的顺序
 order: 3
 # 设置作者
-author: Ms.Hope
+author: xuyong
 # 设置写作时间
-date: 2020-01-01
+date: 2024-12-21
 # 一个页面可以有多个分类
 category:
   - 使用指南

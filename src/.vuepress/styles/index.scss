@@ -1,1 +1,58 @@
 // place your custom styles here
+.vp-blog-hero-title{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.vp-blog-hero-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+    color: white; /* 设置初始文本颜色 */
+    opacity: 1;
+    overflow: hidden;
+    background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red);
+    background-size: 700% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: marquee 5s linear infinite;
+    animation-delay:-5s;
+    -webkit-animation-delay:-5s; /* Safari 和 Chrome */
+
+}
+
+@keyframes marquee {
+    0% {
+        background-position: 0% 50%; /* 与静态样式一致 */
+    }
+    100% {
+        background-position: 100% 50%; /* 向左侧结束 */
+    }
+}
+
+
+.vp-navbar-start {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.vp-navbar-center{
+    display: flex;
+    flex: 28;
+    align-items: center;
+}
+
+.vp-navbar-end{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.vp-navbar-center {
+    justify-content: right;
+}
