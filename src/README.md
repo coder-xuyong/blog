@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 主页
-# heroImage: /assets/images/banner.png
+# heroImage: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/fdcbc9ef8859b7077d92ae38d925e15e_7767077963502328666.png
 heroText: coder-xuyong
 heroFullScreen: false # banner 是否全屏
 bgImage: /assets/images/banner.jpg
