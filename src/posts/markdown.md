@@ -2,7 +2,7 @@
 # 这是文章的标题
 title: 页面配置使用说明
 # 你可以自定义封面图片
-cover: /assets/images/blogs/page1.png
+cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/fdcbc9ef8859b7077d92ae38d925e15e_7767077963502328666.png
 # 这是页面的图标
 icon: file
 # 这是侧边栏的顺序
