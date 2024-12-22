@@ -30,11 +30,12 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "知识积累仓库",
+    description: "牛马知识备用仓库",
     intro: "/intro.html",
     medias: {
       Baidu: "https://www.baidu.com",
       BiliBili: "https://www.bilibili.com",
+      Vuepress: "https://vuepress.vuejs.org/zh/",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
