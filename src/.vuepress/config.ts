@@ -5,7 +5,7 @@ import theme from "./theme.js";
 export default defineUserConfig({
   base: "/blog/",
   lang: "zh-CN",
-  title: "coder",
+  title: "coder-xuyong",
   description: "以 vuepress-theme-hope 为模板的博客",
   theme,
   head: [
