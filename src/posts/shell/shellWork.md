@@ -2,6 +2,7 @@
 title: 工作中遇到的 shell
 icon: pen-to-square
 date: 2024-05-13
+lastUpdated: true
 category:
   - windows
 tag:

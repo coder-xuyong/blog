@@ -2,6 +2,7 @@
 title: java bug 合集
 icon: pen-to-square
 date: 2023-06-05
+lastUpdated: true
 category:
   - java
 tag:

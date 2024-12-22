@@ -2,6 +2,7 @@
 title: ftp
 icon: pen-to-square
 date: 2023-06-05
+lastUpdated: true
 category:
   - java
 tag:

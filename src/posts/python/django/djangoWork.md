@@ -2,6 +2,7 @@
 title: django 使用过程中发生的问题
 icon: pen-to-square
 date: 2024-05-29
+lastUpdated: true
 category:
   - python
 tag:

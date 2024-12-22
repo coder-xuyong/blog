@@ -1,0 +1,72 @@
+---
+title: 触发器
+icon: pen-to-square
+date: 2023-06-01
+lastUpdated: true
+category:
+  - mysql
+
+tag:
+  - sql
+
+---
+
+触发器
+<!-- more -->
+
+
+## 触发器
+1.触发器创建,语法如下
+```shell
+CREATE TRIGGER trigger_name
+{BEFORE | AFTER} {INSERT | UPDATE | DELETE} ON table_name
+FOR EACH ROW
+BEGIN
+    -- 触发器主体
+    -- 你的SQL语句
+END;
+```
+eg:
+创建 order  表
+```shell
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product VARCHAR(255),
+    quantity INT,
+    order_date DATE
+);
+```
+创建 order_summary 表
+```shell
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product VARCHAR(255),
+    quantity INT,
+    order_date DATE
+);
+```
+创建触发器
+```shell
+DELIMITER $$
+
+CREATE TRIGGER after_insert_order
+AFTER INSERT ON orders
+FOR EACH ROW
+BEGIN
+    UPDATE order_summary SET total_orders = total_orders + 1;
+END$$
+DELIMITER ;
+
+```
+
+测试触发器
+```shell
+-- 插入几条订单记录
+INSERT INTO orders (product, quantity, order_date) VALUES ('Apple', 10, '2024-11-28');
+INSERT INTO orders (product, quantity, order_date) VALUES ('Banana', 5, '2024-11-28');
+
+-- 查看当前的总订单数
+SELECT * FROM order_summary;
+```
+
+注意事项：databases.tableName 在mybatis 和 jdbc中，手动 database 写死无效，只能初始化数据库的时候设置的 database 就是 table 所存在的库才有效

@@ -2,10 +2,11 @@
 title: docx4j 基本使用
 icon: pen-to-square
 date: 2024-12-17
+lastUpdated: true
 category:
-  - java
+  - dependence
 tag:
-  - docx4j
+  - java
 ---
 
 docx4j 的一些基本使用

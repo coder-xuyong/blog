@@ -2,6 +2,7 @@
 title: shell 基础知识
 icon: pen-to-square
 date: 2023-06-05
+lastUpdated: true
 category:
   - windows
 tag:
