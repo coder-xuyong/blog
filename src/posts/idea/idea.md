@@ -1,7 +1,7 @@
 ---
 # 这是文章的标题
 title: idea 使用方便记录
-cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/b51565c6f1298e534e90b6e63332e9c1_6618231443033589469.png
+cover: https://webstatic.mihoyo.com/upload/contentweb/2022/07/04/d063646e97392638e07da24ce6b8c3cb_3567507076955258130.png
 icon: file
 author: xuyong
 date: 2024-12-21
