@@ -35,7 +35,10 @@ export default hopeTheme({
     medias: {
       Baidu: "https://www.baidu.com",
       BiliBili: "https://www.bilibili.com",
-      Vuepress: "https://vuepress.vuejs.org/zh/",
+      Vuepress: {
+        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
+        link: "https://vuepress.vuejs.org",
+      // },
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
