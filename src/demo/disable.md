@@ -7,6 +7,9 @@ category:
 tag:
   - 禁用
 
+# 文章不显示
+article: false
+
 navbar: false
 sidebar: false
 

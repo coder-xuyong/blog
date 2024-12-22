@@ -25,7 +25,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "我虽无意逐鹿 却知苍生苦楚",
   displayFooter: true,
 
   // 博客相关

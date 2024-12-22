@@ -6,6 +6,8 @@ category:
   - 指南
 tag:
   - 布局
+# 文章不显示
+article: false
 ---
 
 布局包括:
