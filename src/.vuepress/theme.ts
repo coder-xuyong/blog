@@ -35,10 +35,7 @@ export default hopeTheme({
     medias: {
       Baidu: "https://www.baidu.com",
       BiliBili: "https://www.bilibili.com",
-      Vuepress: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://vuepress.vuejs.org",
-      },
+
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
@@ -49,10 +46,15 @@ export default hopeTheme({
       // Flipboard: "https://example.com",
       // Gitee: "https://example.com",
       GitHub: "https://github.com",
-      overflow: {
+      Overflow: {
         icon: "https://stackoverflow.co/favicon.ico",
-        link: "https://stackoverflow.co/"
-      }
+        link: "https://stackoverflow.co"
+      },
+      Tongyi: "https://tongyi.aliyun.com",
+      Vuepress: {
+        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
+        link: "https://vuepress.vuejs.org",
+      },
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
