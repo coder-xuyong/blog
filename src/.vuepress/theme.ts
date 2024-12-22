@@ -50,7 +50,10 @@ export default hopeTheme({
         icon: "https://stackoverflow.co/favicon.ico",
         link: "https://stackoverflow.co"
       },
-      Tongyi: "https://tongyi.aliyun.com",
+      Tongyi: {
+        icon: "https://img.alicdn.com/imgextra/i1/O1CN01asLYeX1WhbsyEZn5u_!!6000000002820-55-tps-56-56.svg",
+        "https://tongyi.aliyun.com",
+      },
       Vuepress: {
         icon: "https://theme-hope-assets.vuejs.press/logo.svg",
         link: "https://vuepress.vuejs.org",
