@@ -38,7 +38,7 @@ export default hopeTheme({
       Vuepress: {
         icon: "https://theme-hope-assets.vuejs.press/logo.svg",
         link: "https://vuepress.vuejs.org",
-      // },
+      },
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
