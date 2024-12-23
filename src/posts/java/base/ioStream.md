@@ -6,7 +6,7 @@ lastUpdated: true
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 IO 流的一些基本使用，后续记得完善

@@ -6,7 +6,7 @@ lastUpdated: true
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 java 正则表达式的基础使用

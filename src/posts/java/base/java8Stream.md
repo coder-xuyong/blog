@@ -6,7 +6,7 @@ lastUpdated: true
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 java8 stream 梳理

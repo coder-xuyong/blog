@@ -7,7 +7,7 @@ order: 1
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 java 零碎知识点记录

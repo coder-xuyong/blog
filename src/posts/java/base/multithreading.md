@@ -6,7 +6,7 @@ lastUpdated: true
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 多线程基础

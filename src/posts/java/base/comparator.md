@@ -6,7 +6,7 @@ lastUpdated: true
 category:
   - java
 tag:
-  - javabase
+  - java-basic
 ---
 
 Comparator 的一些基本使用
