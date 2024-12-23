@@ -1,3 +1,8 @@
+# 环境信息
+```shell
+>node -v
+v22.12.0
+```
 # 项目启动命令
 ```shell
 npm install 
