@@ -10,7 +10,7 @@ tag:
   - jdbc
 ---
 
-jdbc 基础知识
+jdbc 基础使用
 
 <!-- more -->
 **目标**
