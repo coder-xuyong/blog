@@ -3,6 +3,7 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     "",
+     "intro",
     // {
     //   text: "如何使用",
     //   icon: "laptop-code",
@@ -22,7 +23,6 @@ export default sidebar({
       prefix: "posts/",
       children: "structure",
     },
-    "intro",
     // {
     //   text: "幻灯片",
     //   icon: "person-chalkboard",
