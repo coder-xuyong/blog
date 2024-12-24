@@ -79,7 +79,7 @@ mysql8以下的去除cj，更高版本的加上cj，eg：`driver-class-name: com
 
 特别是自己的pom打包是jar的项目，请查看自己的pom.xml文件中的packaging
 
-```pom
+```
 <packaging>jar</packaging>
 ```
 

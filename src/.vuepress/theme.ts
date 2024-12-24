@@ -50,10 +50,6 @@ export default hopeTheme({
         icon: "https://stackoverflow.co/favicon.ico",
         link: "https://stackoverflow.co"
       },
-      Yuanshen:{
-        icon:"",
-        link: "https://ys.mihoyo.com/main/",
-      },
       Tongyi: {
         icon: "https://img.alicdn.com/imgextra/i1/O1CN01asLYeX1WhbsyEZn5u_!!6000000002820-55-tps-56-56.svg",
         link: "https://tongyi.aliyun.com",
@@ -61,6 +57,10 @@ export default hopeTheme({
       Vuepress: {
         icon: "https://theme-hope-assets.vuejs.press/logo.svg",
         link: "https://vuepress.vuejs.org",
+      },
+      Yuanshen:{
+        icon:"https://ys.mihoyo.com/main/favicon.ico",
+        link: "https://ys.mihoyo.com/main/",
       },
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
