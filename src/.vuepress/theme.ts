@@ -30,7 +30,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "重生之我在提瓦特大陆当牛马程序员的知识备用仓库",
+    description: "重生之我在提瓦特大陆当牛做马",
     intro: "/intro.html",
     medias: {
       Baidu: "https://www.baidu.com",
