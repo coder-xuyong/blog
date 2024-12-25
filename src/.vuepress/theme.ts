@@ -56,7 +56,7 @@ export default hopeTheme({
       },
       Vuepress: {
         icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://vuepress.vuejs.org",
+        link: "https://vuepress.vuejs.org/zh/",
       },
       Yuanshen:{
         icon:"https://ys.mihoyo.com/main/favicon.ico",
