@@ -17,6 +17,8 @@ linux 命令集
 ## 1.基本命令
 
 ```shell
+ps -ef | grep Name 查找进程
+kill Name 结束进程
 uname -m 显示机器的处理器架构
 uname -r 显示正在使用的内核版本
 dmidecode -q 显示硬件系统部件
