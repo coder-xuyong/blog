@@ -3,6 +3,8 @@ title: redis 学习笔记之快速入门
 icon: pen-to-square
 date: 2023-06-01
 lastUpdated: true
+origin: reprint
+reprint_from: "https://example.com/original-article" # 可选，用于提供原始链接
 category:
   - redis
 
