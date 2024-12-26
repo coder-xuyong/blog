@@ -70,3 +70,75 @@ chmod +x /myApp/test/startup.sh
 ```bash
 find /path/to/search -name "filename"
 ```
+
+## java linux 启动和关闭脚本
+启动： sh server.sh start
+关闭： sh server.sh stop
+server.sh
+```shell
+#!/usr/bin/env sh
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+APP_HOME=$(cd $(dirname $0)/../;pwd)                    # shell脚本必须指定，因为脚本不会自动加载环境变量，不写的话导致出现此错误
+app=$APP_HOME'/app.jar'    #jar包的决定路径
+args='-server -Xms4096m -Xmx4096m -XX:PermSize=512m -XX:SurvivorRatio=2 -XX:+UseParallelGC'  #java程序启动参数，可不写
+args1='--spring.config.location='$APP_HOME'/config/application.properties --logging.config='$APP_HOME'/config/logback-spring.xml --db.file='$APP_HOME'/config/config.db --logging.file.path='$APP_HOME'/logs/'
+LOGS_FILE=/dev/null                           # 把打印的日志扔进垃圾桶
+
+cmd=$1                                        #获取执行脚本的时候带的参数
+pid=`ps -ef|grep java|grep $app|awk '{print $2}'`                # 抓取对应的java进程
+
+
+
+startup(){
+  aa=`nohup java -jar $args $app $args1 >> $LOGS_FILE 2>&1 &`
+  echo "nohup java -jar $args $app $args1 >> $LOGS_FILE 2>&1 &"
+}
+
+if [ ! $cmd ]; then
+  echo "Please specify args 'start|restart|stop'"
+  exit
+fi
+
+if [ $cmd = 'start' ]; then
+  if [ ! $pid ]; then
+    startup
+  else
+    echo "$app is running! pid=$pid"
+  fi
+fi
+
+if [ $cmd = 'restart' ]; then
+  if [ $pid ]
+    then
+      echo "$pid will be killed after 3 seconds!"
+      sleep 3
+      kill -9 $pid
+  fi
+  startup
+fi
+
+if [ $cmd = 'stop' ]; then
+  if [ $pid ]; then
+    echo "$pid will be killed after 3 seconds!"
+    sleep 3
+    kill -9 $pid
+  fi
+  echo "$app is stopped"
+fi
+```
