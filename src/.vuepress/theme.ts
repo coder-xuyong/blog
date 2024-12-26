@@ -63,9 +63,9 @@ export default hopeTheme({
         link: "https://ys.mihoyo.com/main/",
       },
       fontawesome:{
-        icon: font-awesome-logo,
+        icon: "https://fontawesome.com/favicon.ico",
         llink:"https://fontawesome.com/search?o=r&m=free",
-          },
+      },
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
