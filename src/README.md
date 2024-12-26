@@ -6,7 +6,8 @@ title: 主页
 # heroImage: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/fdcbc9ef8859b7077d92ae38d925e15e_7767077963502328666.png
 heroText: coder-xuyong
 heroFullScreen: false # banner 是否全屏
-bgImage: /assets/images/banner.jpg
+#bgImage: /assets/images/banner.jpg
+bgImage: https://ys.mihoyo.com/main/_nuxt/img/poster.47f71d4.jpg
 tagline: 天高散孤云 落日澄空故乡影 飘摇游子心
 
 
