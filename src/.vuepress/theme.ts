@@ -64,8 +64,12 @@ export default hopeTheme({
       },
       fontawesome:{
         icon: "https://fontawesome.com/favicon.ico",
-        llink:"https://fontawesome.com/search?o=r&m=free",
+        link:"https://fontawesome.com/search?o=r&m=free",
       },
+      Doubao:{
+        icon:"https://img-s.msn.cn/tenant/amp/entityid/BB1qZI2R.img",
+        link:"https://www.doubao.com/",
+      }
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
