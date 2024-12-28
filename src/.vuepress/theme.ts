@@ -28,6 +28,8 @@ export default hopeTheme({
   footer: "我虽无意逐鹿 却知苍生苦楚",
   displayFooter: true,
 
+  
+
   // 博客相关
   blog: {
     description: "重生之我在提瓦特大陆当牛做马",
@@ -69,6 +71,10 @@ export default hopeTheme({
       Doubao:{
         icon:"https://img-s.msn.cn/tenant/amp/entityid/BB1qZI2R.img",
         link:"https://www.doubao.com/",
+      },
+      ChatGPT:{
+        icon:"https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg",
+        link:"https://chatgpt.com/",
       }
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
