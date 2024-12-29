@@ -8,7 +8,7 @@ heroText: coder-xuyong
 heroFullScreen: false # banner 是否全屏
 #bgImage: /assets/images/banner.jpg
 bgImage: https://ys.mihoyo.com/main/_nuxt/img/poster.47f71d4.jpg
-tagline: 心有所向 日复一日 必有精进
+tagline: 心有所向 日复一日 必有精进✨
 
 
 projects:
