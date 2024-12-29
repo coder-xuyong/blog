@@ -1,7 +1,8 @@
 import { defineUserConfig } from "vuepress";
-
+import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
 
+const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/blog/",
   lang: "zh-CN",
@@ -22,7 +23,9 @@ export default defineUserConfig({
     ]
   ],
 
-
+alias: {
+    "@DemoComponent": path.resolve(__dirname, "components/Demo.vue"),
+  },
   // 和 PWA 一起启用
   // shouldPrefetch: false,
 });

@@ -2,6 +2,8 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
+  "/posts/java/",
+  // "/posts/markdown.md",
   // "/demo/",
   // {
   //   text: "博文",

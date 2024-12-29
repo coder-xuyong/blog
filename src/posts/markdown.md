@@ -34,6 +34,16 @@ copyright: 无版权
 
 <!-- more -->
 
+## 组件引用实例
+
+很奇怪，在其他地方有效果，在这里没有效果
+<DemoComponent />
+
+<script setup>
+import DemoComponent from "@DemoComponent";
+</script>
+
+
 ## 页面标题
 
 The first H1 title in Markdown will be regarded as page title.

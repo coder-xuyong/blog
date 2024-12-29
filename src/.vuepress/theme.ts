@@ -17,6 +17,12 @@ export default hopeTheme({
   repo: "coder-xuyong/blog",
 
   docsDir: "src",
+  //专注模式
+  focus: false,
+  //纯净模式
+  pure:false,
+  //因此打印按钮
+  print: false,
 
   // 导航栏
   navbar,
@@ -27,8 +33,14 @@ export default hopeTheme({
   // 页脚
   footer: "我虽无意逐鹿 却知苍生苦楚",
   displayFooter: true,
-
-  
+  // copyright: true,
+  // copyright: "自定义版权信息",
+  // 导航栏布局配置
+  navbarLayout: {
+    start: ["Brand"],
+    // center: ["Links"],
+    end: ["Links", "Repo", "Outlook", "Search"],
+  },
 
   // 博客相关
   blog: {
@@ -192,6 +204,13 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
+
+    // 启用搜索框插件
+    search: true,
+    // search: {
+    //   插件选项
+    // },
+
 
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
