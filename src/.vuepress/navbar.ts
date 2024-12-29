@@ -2,7 +2,33 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/posts/java/",
+  ,
+  { text: "java 基础", icon: "fa-brands fa-java", link: "/posts/java/basic/" },
+  {
+    text: "java 框架",
+    icon: "fa-solid fa-book",
+    prefix: "/posts/java/",
+    children: [{
+      text: "netty",
+      // icon: "fa-solid fa-book",
+      prefix: "netty/",
+      children: [
+        "Netty01-nio",
+        "Netty02-入门",
+        "Netty03-进阶",
+        "Netty04-优化与源码",
+      ]
+    }, {
+      text: "spring",
+      // icon: "pen-to-square",
+      prefix: "spring/",
+      children: [
+        "spring",
+      ]
+    },
+    ]
+  },
+
   // "/posts/markdown.md",
   // "/demo/",
   // {
