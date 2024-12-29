@@ -3,6 +3,7 @@ title: 多线程基础
 icon: pen-to-square
 date: 2023-06-02
 lastUpdated: true
+order: -1 
 category:
   - java
 tag:

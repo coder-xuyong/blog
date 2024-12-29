@@ -3,7 +3,7 @@ title: java 零碎知识点
 icon: pen-to-square
 date: 2023-06-04
 lastUpdated: true
-order: 1
+# order: 1
 category:
   - java
 tag:
