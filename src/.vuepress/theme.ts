@@ -3,11 +3,11 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://coder-xuyong.github.io/blog/",
 
   author: {
     name: "xuyong",
-    url: "https://mister-hope.com",
+    url: "https://github.com/coder-xuyong",
   },
 
   iconAssets: "fontawesome-with-brands",
