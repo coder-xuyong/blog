@@ -4,8 +4,9 @@ export default navbar([
   "/",
   ,
   { text: "java 基础", icon: "fa-brands fa-java", link: "/posts/java/basic/" },
+  { text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
   {
-    text: "java 框架",
+    text: "框架",
     icon: "fa-solid fa-book",
     prefix: "/posts/java/",
     children: [{
@@ -25,7 +26,7 @@ export default navbar([
       children: [
         "spring",
       ]
-    },
+    },{ text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
     ]
   },
 
