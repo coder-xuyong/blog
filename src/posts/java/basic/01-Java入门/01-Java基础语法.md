@@ -1,5 +1,5 @@
 ---
-title: Java基础语法
+title: Java入门
 icon: pen-to-square
 # cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/4c4b8babc68ffedce9bd5766b60e1ae5_8781849729625946129.png
 date: 2023-02-24
@@ -14,7 +14,7 @@ tag:
   - java-basic
 ---
 
-Java基础语法
+Java入门介绍，编写hello world
 
 <!-- more -->
 
