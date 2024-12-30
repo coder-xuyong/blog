@@ -1,5 +1,5 @@
 ---
-title: Java基础语法
+title: Java基础概念
 icon: pen-to-square
 # cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/4c4b8babc68ffedce9bd5766b60e1ae5_8781849729625946129.png
 date: 2023-02-24
@@ -14,10 +14,9 @@ tag:
   - java-basic
 ---
 
-Java基础语法
+Java基础概念学习
 
 <!-- more -->
-# day02 - Java基础语法
 
 ## 1. 注释
 
@@ -465,8 +464,7 @@ public class VariableTest3{
 ## 6. 标识符
 
 业内大多数程序员都在遵守阿里巴巴的命名规则。
-
-在day02的资料文件夹中有。
+访问地址：https://developer.aliyun.com/ebook/386
 
 ### 6.1 硬性要求：
 
@@ -565,7 +563,9 @@ public class ScannerDemo1{
 
 ​	可以到官方网站自行下载，网址为：https://www.jetbrains.com/idea
 
-​	今天的资料中，对应的安装包也提高给大家了。
+​	也可以通过百度网盘下载（此idea安装方法需查看里面的txt文件）：
+	通过网盘分享的文件：IDEA 2022.1.3
+	链接: https://pan.baidu.com/s/1XIn1P2SwL10NqucPOgbsgA?pwd=5rsi 提取码: 5rsi
 
 #### 8.2.2 安装
 
