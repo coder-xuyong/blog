@@ -209,7 +209,8 @@ export default hopeTheme({
     search: true,
     search: {
       // 插件选项
-        isSearchable: (page) => page.path !== '/',
+       // 允许搜索 Frontmatter 中的 `tags`
+      getExtraFields: (page) => page.frontmatter.tags ?? [],
     },
 
 
