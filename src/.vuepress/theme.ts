@@ -209,8 +209,10 @@ export default hopeTheme({
     search: true,
     search: {
       // 插件选项
-       // 允许搜索 Frontmatter 中的 `tags`
-       getExtraFields:  (page) => page.content ?? []
+      getExtraFields: (page) => {
+                    // 返回整个文档内容
+                    return [page.content];
+                }
     },
 
 
