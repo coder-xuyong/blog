@@ -28,4 +28,10 @@ alias: {
   },
   // 和 PWA 一起启用
   // shouldPrefetch: false,
+plugins: [
+  searchPlugin({
+    // 允许搜索 Frontmatter 中的 `tags`
+    getExtraFields: (page) => page.frontmatter.tags ?? [],
+  }),
+],
 });
