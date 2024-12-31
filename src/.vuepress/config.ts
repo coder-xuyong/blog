@@ -1,6 +1,9 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
+// import { searchPlugin } from "@vuepress/plugin-search";
+import { cut } from 'nodejs-jieba'
+import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
@@ -28,4 +31,26 @@ alias: {
   },
   // 和 PWA 一起启用
   // shouldPrefetch: false,
+    plugins: [
+      // searchPlugin({
+      //   locales: {
+      //     '/': {
+      //       placeholder: 'Search',
+      //     }
+      //   },
+
+      //   maxSuggestions: 10,
+
+        
+      // }),
+      // slimsearchPlugin({
+      //   // 索引全部内容
+      //   indexContent: true,
+      //   indexOptions: {
+      //     // 使用 nodejs-jieba 进行分词
+      //     tokenize: (text, fieldName) =>
+      //       fieldName === 'id' ? [text] : cut(text, true),
+      //   },
+      // }),
+    ],
 });

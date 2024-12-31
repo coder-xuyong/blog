@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-
+import { cut } from 'nodejs-jieba'
 export default hopeTheme({
   hostname: "https://coder-xuyong.github.io/blog/",
 
@@ -206,39 +206,51 @@ export default hopeTheme({
     blog: true,
 
     // 启用搜索框插件
-    search: true,
-    search: {
-      // 插件选项
-      maxSuggestions: 10,
-      getExtraFields: (page) => {
-                    // 返回整个文档内容
-                    return [page.content];
-                },
-         locales: {
-                    '/': {
-                        getPreview: (page, matched) => {
-                            let previewContent = '';
-                            const lines = page.content.split('\n');
-                            let count = 0;
-                            for (const line of lines) {
-                                if (matched.some(match => line.includes(match))) {
-                                    previewContent += line + '\n';
-                                    count++;
-                                    // 控制展示的包含搜索内容的行数，这里设为3行
-                                    if (count === 3) {
-                                        break;
-                                    }
-                                }
-                            }
-                            if (previewContent === '') {
-                                // 如果没有找到包含搜索词的内容，返回文档开头部分作为预览
-                                previewContent = lines.slice(0, 3).join('\n');
-                            }
-                            return previewContent;
-                        }
-                    }
-         },
+    // slimsearch: true,
+    slimsearch:{
+      hotReload: true,
+      indexContent: true,
+      suggestion: true,
+      
+      indexOptions: {
+        // 使用 nodejs-jieba 进行分词
+        tokenize: (text, fieldName) =>
+          fieldName === 'id' ? [text] : cut(text, true),
+      },
     },
+    // search: true,
+    // search: {
+    //   // 插件选项
+    //   maxSuggestions: 10,
+    //   getExtraFields: (page) => {
+    //                 // 返回整个文档内容
+    //                 return [page.content];
+    //             },
+    //      locales: {
+    //                 '/': {
+    //                     getPreview: (page, matched) => {
+    //                         let previewContent = '';
+    //                         const lines = page.content.split('\n');
+    //                         let count = 0;
+    //                         for (const line of lines) {
+    //                             if (matched.some(match => line.includes(match))) {
+    //                                 previewContent += line + '\n';
+    //                                 count++;
+    //                                 // 控制展示的包含搜索内容的行数，这里设为3行
+    //                                 if (count === 3) {
+    //                                     break;
+    //                                 }
+    //                             }
+    //                         }
+    //                         if (previewContent === '') {
+    //                             // 如果没有找到包含搜索词的内容，返回文档开头部分作为预览
+    //                             previewContent = lines.slice(0, 3).join('\n');
+    //                         }
+    //                         return previewContent;
+    //                     }
+    //                 }
+    //      },
+    // },
 
 
     // 启用之前需安装 @waline/client
