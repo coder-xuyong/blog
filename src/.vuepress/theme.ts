@@ -207,9 +207,10 @@ export default hopeTheme({
 
     // 启用搜索框插件
     search: true,
-    // search: {
-    //   插件选项
-    // },
+    search: {
+      // 插件选项
+        isSearchable: (page) => page.path !== '/',
+    },
 
 
     // 启用之前需安装 @waline/client
