@@ -210,16 +210,7 @@ export default hopeTheme({
     search: {
       // 插件选项
        // 允许搜索 Frontmatter 中的 `tags`
-       getExtraFields: (page) => {
-                    // 提取代码块内容
-                    let codeBlocksContent = [];
-                    page.content.split('```').forEach((part, index) => {
-                        if (index % 2 === 1) {
-                            codeBlocksContent.push(part.trim());
-                        }
-                    });
-                    return codeBlocksContent;
-                }
+       getExtraFields:  (page) => page.content ?? []
     },
 
 
