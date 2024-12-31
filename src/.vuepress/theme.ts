@@ -210,7 +210,7 @@ export default hopeTheme({
     search: {
       // 插件选项
        // 允许搜索 Frontmatter 中的 `tags`
-      getExtraFields: (page) => page.frontmatter.tags ?? [],
+      getExtraFields: (page) => page ?? [],
     },
 
 
