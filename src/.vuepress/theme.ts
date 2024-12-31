@@ -209,9 +209,31 @@ export default hopeTheme({
     search: true,
     search: {
       // 插件选项
+      maxSuggestions: 10,
       getExtraFields: (page) => {
                     // 返回整个文档内容
                     return [page.content];
+                },
+       locales: {
+                    '/': {
+                        // 自定义搜索结果展示的内容提取函数
+                        getPreview: (page, matched) => {
+                            let previewContent = '';
+                            const lines = page.content.split('\n');
+                            // 遍历文档的每一行，查找匹配的内容并截取部分展示
+                            for (const line of lines) {
+                                if (matched.some(match => line.includes(match))) {
+                                    previewContent += line + '\n';
+                                    // 可以根据实际需求控制截取的长度，这里示例截取前后各 20 个字符左右
+                                    if (previewContent.length > 40) {
+                                        previewContent = previewContent.substring(0, 40) + '...';
+                                        break;
+                                    }
+                                }
+                            }
+                            return previewContent;
+                        }
+                    }
                 }
     },
 
