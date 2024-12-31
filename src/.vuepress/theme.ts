@@ -214,27 +214,29 @@ export default hopeTheme({
                     // 返回整个文档内容
                     return [page.content];
                 },
-       locales: {
+         locales: {
                     '/': {
-                        // 自定义搜索结果展示的内容提取函数
                         getPreview: (page, matched) => {
                             let previewContent = '';
                             const lines = page.content.split('\n');
-                            // 遍历文档的每一行，查找匹配的内容并截取部分展示
+                            let count = 0;
                             for (const line of lines) {
                                 if (matched.some(match => line.includes(match))) {
                                     previewContent += line + '\n';
-                                    // 可以根据实际需求控制截取的长度，这里示例截取前后各 20 个字符左右
-                                    if (previewContent.length > 40) {
-                                        previewContent = previewContent.substring(0, 40) + '...';
+                                    count++;
+                                    // 控制展示的包含搜索内容的行数，这里设为3行
+                                    if (count === 3) {
                                         break;
                                     }
                                 }
                             }
+                            if (previewContent === '') {
+                                // 如果没有找到包含搜索词的内容，返回文档开头部分作为预览
+                                previewContent = lines.slice(0, 3).join('\n');
+                            }
                             return previewContent;
                         }
                     }
-                }
     },
 
 
