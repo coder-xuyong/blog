@@ -237,6 +237,7 @@ export default hopeTheme({
                             return previewContent;
                         }
                     }
+         },
     },
 
 
