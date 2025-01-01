@@ -210,7 +210,7 @@ export default hopeTheme({
     slimsearch:{
       hotReload: true,
       indexContent: true,
-      suggestion: true,
+      // suggestion: true,
       
       indexOptions: {
         // 使用 nodejs-jieba 进行分词
