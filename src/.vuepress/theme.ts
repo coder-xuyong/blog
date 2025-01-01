@@ -162,7 +162,14 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
-
+    highlighter:{      
+      type: "shiki",
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','sql', 'xml', 'java', 'tex', 'cmd', 'properties', 'yaml','mermaid', 'python', 'kotlin', 'csharp', 'jsx', 'dart', 'php', 'less','scss', 'yml', 'groovy', 'powershell'],
+      langAlias: { 
+        mysql: 'sql',
+      },
+      
+    }
     // 取消注释它们如果你需要 TeX 支持
     // markdownMath: {
     //   // 启用前安装 katex
@@ -200,7 +207,6 @@ export default hopeTheme({
     // 在启用之前安装 sandpack-vue3
     // sandpack: true,
   },
-
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
