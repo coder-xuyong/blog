@@ -31,9 +31,8 @@ tag:
 
 ### 1.2.如何使用API帮助文档
 
-- 打开帮助文档
+- 打开帮助文档：https://docs.oracle.com/javase/8/docs/api/index.html
 
-![01](img\01.png)
 
 - 找到索引选项卡中的输入框
 
