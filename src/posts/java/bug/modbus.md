@@ -76,6 +76,8 @@ Modbus-RTU协议只需要看懂功能码0x03、0x06、0x10这三个基本的就�
 ### 5.1.帧结构
 
 
+## 使用
+查看：https://github.com/MangoAutomation/modbus4j
 
 ## 参考文档：
 https://blog.csdn.net/tiandiren111/article/details/118347661
