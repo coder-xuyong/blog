@@ -212,7 +212,11 @@ export default hopeTheme({
     blog: true,
 
     // 启用搜索框插件
-    search:false,
+    // search:true,
+    search: {
+      // 插件选项
+        isSearchable: (page) => page.path !== '/',
+    },
     slimsearch: false,
     // slimsearch:{
     //   hotReload: true,
