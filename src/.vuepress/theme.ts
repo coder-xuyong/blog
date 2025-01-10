@@ -212,18 +212,19 @@ export default hopeTheme({
     blog: true,
 
     // 启用搜索框插件
-    // slimsearch: true,
-    slimsearch:{
-      hotReload: true,
-      indexContent: true,
-      // suggestion: true,
+    search:false,
+    slimsearch: false,
+    // slimsearch:{
+    //   hotReload: true,
+    //   indexContent: true,
+    //   // suggestion: true,
       
-      indexOptions: {
-        // 使用 nodejs-jieba 进行分词
-        tokenize: (text, fieldName) =>
-          fieldName === 'id' ? [text] : cut(text, true),
-      },
-    },
+    //   indexOptions: {
+    //     // 使用 nodejs-jieba 进行分词
+    //     tokenize: (text, fieldName) =>
+    //       fieldName === 'id' ? [text] : cut(text, true),
+    //   },
+    // },
     // search: true,
     // search: {
     //   // 插件选项
