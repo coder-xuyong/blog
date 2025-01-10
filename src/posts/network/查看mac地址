@@ -1,0 +1,21 @@
+---
+title: 查看电脑mac地址
+icon: pen-to-square
+date: 2025-01-10
+lastUpdated: true
+category:
+  - java
+tag:
+  - network
+---
+
+如何查看电脑的mac地址
+
+<!-- more -->
+
+## windows
+1.可以是用命令`getmac`获取
+2.也可以在 `控制面板\所有控制面板项\网络连接 ` 中，双击一个网络，点击详细信息，就可以看到其中的物理地址
+
+## linux
+`ifconfig` 命令可以查看，其中 “HWaddr” 或 “ether” 一般为物理地址
