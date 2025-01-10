@@ -171,13 +171,11 @@ XML的全称为(EXtensible Markup Language)，是一种可扩展的标记语言
 
   1. 我们可以通过网站：https://dom4j.github.io/ 去下载dom4j
 
-     今天的资料中已经提供,我们不用再单独下载了,直接使用即可
+  2. 下载好dom4j-1.6.1.jar，在idea中当前模块下新建一个libs文件夹,将jar包复制到文件夹中
 
-  2. 将提供好的dom4j-1.6.1.zip解压,找到里面的dom4j-1.6.1.jar
+  3. 选中jar包 -> 右键 -> 选择add as library即可
+  4. 或者使用maven的话，可以在[maven仓库](https://mvnrepository.com/)中去获取地址
 
-  3. 在idea中当前模块下新建一个libs文件夹,将jar包复制到文件夹中
-
-  4. 选中jar包 -> 右键 -> 选择add as library即可
 
 + 需求
 
@@ -347,9 +345,9 @@ XML的全称为(EXtensible Markup Language)，是一种可扩展的标记语言
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT age (#PCDATA)>
     ```
-  ```
+  
 
-  ```
+  
 
 + 引入DTD约束
 
