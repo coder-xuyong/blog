@@ -7,7 +7,9 @@ lastUpdated: true
 order: 1
 author: 
     - name: xuyong
-    - name: 黑马程序员
+      url: https://github.com/coder-xuyong
+    - name: itheima
+      url: https://space.bilibili.com/37974444?spm_id_from=333.337.search-card.all.click
 category:
   - java
 tag:

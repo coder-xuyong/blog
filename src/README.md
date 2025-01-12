@@ -30,7 +30,7 @@ projects:
   - icon: article
     name: 无须服务器，搭建一个在线blog
     desc: 使用 GitHub pages + vuepress 搭建静态blog
-    link: https://github.com/coder-xuyong/blog/blob/main/README.md
+    link: http://localhost:8080/blog/posts/vuepress/blogTutorial.html
 
   # - icon: friend
   #   name: 伙伴名称
