@@ -29,10 +29,10 @@
 
 @keyframes marquee {
     0% {
-        background-position: 0% 50%; /* 与静态样式一致 */
+        background-position: 100% 50%; /* 与静态样式一致 */
     }
     100% {
-        background-position: 100% 50%; /* 向左侧结束 */
+        background-position: 50% 0%; /* 向左侧结束 */
     }
 }
 
