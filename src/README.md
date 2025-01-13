@@ -27,10 +27,10 @@ projects:
   #   desc: 书籍详细描述
   #   link: https://你的书籍链接
 
-  - icon: article
-    name: 无须服务器，搭建一个在线blog
-    desc: 使用 GitHub pages + vuepress 搭建静态blog
-    link: https://github.com/coder-xuyong/blog/README.md
+  # - icon: article
+  #   name: 无须服务器，搭建一个在线blog
+  #   desc: 使用 GitHub pages + vuepress 搭建静态blog
+  #   link: https://github.com/coder-xuyong/blog/README.md
 
   # - icon: friend
   #   name: 伙伴名称
