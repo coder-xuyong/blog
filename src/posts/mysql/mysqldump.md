@@ -2,6 +2,7 @@
 title: mysqldump 基本使用
 icon: pen-to-square
 date: 2025-01-13
+cover: https://fastcdn.mihoyo.com/content-v2/hk4e/126888/1a1017906928ccf282455abd007ab356_8943004632492912906.png
 lastUpdated: true
 category:
   - mysql
