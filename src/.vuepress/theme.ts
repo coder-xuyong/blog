@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { cut } from 'nodejs-jieba'
+// import { cut } from 'nodejs-jieba'
 export default hopeTheme({
   hostname: "https://coder-xuyong.github.io/blog/",
 
@@ -87,6 +87,10 @@ export default hopeTheme({
       ChatGPT:{
         icon:"https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg",
         link:"https://chatgpt.com/",
+      },
+      MarkDown:{
+        icon: "https://www.markdownguide.org/favicon.ico",
+        link:"https://theme-hope.vuejs.press/zh/cookbook/markdown/"
       }
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
