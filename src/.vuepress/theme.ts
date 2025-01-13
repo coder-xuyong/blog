@@ -89,7 +89,7 @@ export default hopeTheme({
         link:"https://chatgpt.com/",
       },
       MarkDown:{
-        icon: "https://www.markdownguide.org/favicon.ico",
+        icon:"https://markdownlivepreview.com/favicon.png",
         link:"https://theme-hope.vuejs.press/zh/cookbook/markdown/"
       }
       // Gitlab: "https://example.com",

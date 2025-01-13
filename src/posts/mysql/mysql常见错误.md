@@ -33,7 +33,7 @@ ERROR 1146 (42S02): Table 'test.no_such_table' doesn't exist
 - 表 'test.no_such_table' 不存在是错误消息
 
 ## 用户 'root'@'localhost' 的访问被拒绝（使用密码：YES）
-```shelll
+```shell
 ERROR 1045: Access denied for user 'root'@'localhost'
 ```
 任何使用 MySQL 的人都可能至少遇到过一次。
