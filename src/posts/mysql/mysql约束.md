@@ -238,7 +238,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(null,'张三','1999-11-11
 
 执行结果如下：
 
-<img src="assets/image-20210724114548170.png" alt="image-20210724114548170" style="zoom:80%;" />
 
 从上面的结果可以看到，字段 `id` 不能为null。那我们重新添加一条数据，如下：
 
@@ -248,7 +247,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(1,'张三','1999-11-11',8
 
 执行结果如下：
 
-<img src="assets/image-20210724114805350.png" alt="image-20210724114805350" style="zoom:80%;" />
 
 从上面结果可以看到，1这个值重复了。所以主键约束是用来限制数据非空且唯一的。那我们再添加一条符合要求的数据
 
@@ -258,7 +256,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(2,'李四','1999-11-11',8
 
 执行结果如下：
 
-<img src="assets/image-20210724115024106.png" alt="image-20210724115024106" style="zoom:80%;" />
 
 * **验证非空约束**
 
@@ -268,7 +265,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(3,null,'1999-11-11',8800,
 
 执行结果如下：
 
-<img src="assets/image-20210724115149415.png" alt="image-20210724115149415" style="zoom:80%;" />
 
 从上面结果可以看到，`ename` 字段的非空约束生效了。
 
@@ -280,7 +276,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(3,'李四','1999-11-11',8
 
 执行结果如下：
 
-<img src="assets/image-20210724115336916.png" alt="image-20210724115336916" style="zoom:80%;" />
 
 从上面结果可以看到，`ename` 字段的唯一约束生效了。
 
@@ -292,7 +287,6 @@ INSERT INTO emp(id,ename,joindate,salary) values(3,'王五','1999-11-11',8800);
 
 执行完上面语句后查询表中数据，如下图可以看到王五这条数据的bonus列就有了默认值0。
 
-<img src="assets/image-20210724115547951.png" alt="image-20210724115547951" style="zoom:80%;" />
 
 ==注意：默认约束只有在不给值时才会采用默认值。如果给了null，那值就是null值。==
 
@@ -304,7 +298,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(4,'赵六','1999-11-11',8
 
 执行完上面语句后查询表中数据，如下图可以看到赵六这条数据的bonus列的值是null。
 
-<img src="assets/image-20210724115826516.png" alt="image-20210724115826516" style="zoom:80%;" />
 
 * **验证自动增长： auto_increment  当列是数字类型 并且唯一约束**
 
@@ -339,7 +332,6 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(null,'赵六3','1999-11-1
 
 如何理解上面的概念呢？如下图有两张表，员工表和部门表：
 
-<img src="assets/image-20210724120904180.png" alt="image-20210724120904180" style="zoom:80%;" />
 
 员工表中的dep_id字段是部门表的id字段关联，也就是说1号学生张三属于1号部门研发部的员工。现在我要删除1号部门，就会出现错误的数据（员工表中属于1号部门的数据）。而我们上面说的两张表的关系只是我们认为它们有关系，此时需要通过外键让这两张表产生数据库层面的关系，这样你要删除部门表中的1号部门的数据将无法删除。
 
