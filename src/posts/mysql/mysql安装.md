@@ -3,6 +3,7 @@ title: mysql 安装
 icon: pen-to-square
 date: 2023-06-01
 lastUpdated: true
+order: 1
 category:
   - mysql
 
@@ -16,6 +17,8 @@ mysql 安装指南
 
 # mysql安装
 
+## 官方文档
+(mysql5.7 参考手册)[https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-howto.html]
 
 ## 下载
 压缩包下载地址：https://dev.mysql.com/downloads/mysql/5.5.html#downloads

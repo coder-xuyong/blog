@@ -197,6 +197,13 @@ mysql -u root -pYOUR_PASSWORD destination_db < db_backup.sql
 ```
 ⚠️ 请注意，此命令将覆盖数据库的内容。destination_db
 
+
+## --set-gtid-purged=OFF
+添加这个命令，导出的时候，不导出 GTIDs。
+GTIDs：从MySQL 5.6.5 开始新增了一种基于 GTID 的复制方式。通过 GTID 保证了每个在主库上提交的事务在集群中有一个唯一的ID。这种方式强化了数据库的主备一致性，故障恢复以及容错能力。
+```shell
+Warning: A partial dump from a server that has GTIDs will by default include the GTIDs of all transactions, even those that changed suppressed parts of the database. If you don't want to restore GTIDs, pass --set-gtid-purged=OFF. To make a complete dump, pass --all-databases --triggers --routines --events. mysqldump: Error 2013: Lost connection to MySQL server during query when dumping table `table` at row: 5720
+```
 ## Mysql 备份完整示例
 
 ### 备份和恢复所有 MySQL 数据库
@@ -399,6 +406,7 @@ mysqldump: Got error: 1045: &quot;Access denied for user &#39;user&#39; @ &#39;l
 3. 用户凭据错误
 
 如果您在连接到数据库时尝试使用错误的用户名和密码组合，则会发生此错误。MySQL 无法验证请求是否真实并返回错误。您必须使用适当的凭据再次发出请求，确保原始命令中没有任何拼写错误，因为这是最容易犯的错误。
+
 
 ## 结论
 Mysqldump 是一个有用的工具，可以帮助用最少的命令备份数据库。一个命令允许将整个数据库输出到单个文本文件中。该工具用途广泛，足以备份所需的数据库部分，并带有多种选项来更改您需要保存的数据。
