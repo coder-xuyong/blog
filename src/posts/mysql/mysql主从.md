@@ -18,3 +18,4 @@ mysql主从 和 GTID
 ## 参考
 > https://blog.csdn.net/weixin_66592566/article/details/143580774
 > https://blog.csdn.net/Mrxiao_bo/article/details/138228751
+> https://blog.csdn.net/qq_23435961/article/details/112346857

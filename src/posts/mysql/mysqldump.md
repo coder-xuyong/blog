@@ -21,7 +21,7 @@ mysqldump 的使用
 
 此工具的目的是将数据库导出到备份文件或将数据库移动到另一个 Web 主机。其他带分隔符的文本格式（如 XML 和 CSV）也可以使用 mysqldump 生成。这些简单的查询使备份过程更加容易。文件中的文本显示为一组 SQL 语句，以后可以将其重建为原始状态。
 
-## 你应该使用 mysqldump 做什么？
+## mysqldump 是做什么的？
 - MySQL 数据库备份：使用 mysqldump 创建安全备份，保护您的数据免遭丢失或损坏。
 - MySQL 数据库版本控制：创建数据库版本，有点像您可以在任何阶段恢复到的 GIT 标签
 - MySQL 数据库迁移：mysqldump 简化了数据库传输，确保了服务器或环境转换期间的数据完整性。
@@ -36,11 +36,11 @@ mysqldump 的使用
 - 自定义用户定义格式：您可以使用 option 并指定自定义分隔符和格式来定义自己的自定义输出格式。
 
 
-## 如何使用 mysqldump？
+## 如何使用？
 作为开发人员，您可以利用 mysqldump 来获取 .sql 文件，该文件充当全面的数据库备份。
 要使用此工具，您需要访问运行数据库实例的 MySQL 服务器，以及导出数据所需的权限。不要忘记准备好您的数据库用户凭证，包括用户名和密码。
 
-## 如何访问 mysqldump？
+## 如何访问？
 mysqldump 命令行工具通常与 MySQL 客户端或 MySQL 服务器安装捆绑在一起。要验证 mysqldump 在本地系统上是否可用，您可以运行以下命令：
 ```shell
 # linux
@@ -59,7 +59,7 @@ mysqldump --version
 mysqldump --help
 ```
 
-## 使用 mysqldump 需要哪些权限？
+## 需要哪些权限？
 您需要一个有效的数据库用户，至少具有完全读取访问权限。这应该适用于基本选项，但更高级的命令可能需要额外的权限。
 
 要使用 mysqldump，您通常需要以下权限：
@@ -69,7 +69,7 @@ mysqldump --help
 - LOCK TABLES 权限：表锁定所必需的。
 - RELOAD 权限：与 --flush-privileges 选项一起使用。
 
-## 使用 mysqldump 导出 MySQL 数据库
+## 导出 MySQL 数据库
 
 我们将在下面了解如何使用 mysqldump 执行以下 MySQL 任务：
 
@@ -95,7 +95,7 @@ mysqldump --help
 mysqldump--ignore-table--no-data
 ```
 
-## 通过 mysqldump 备份特定的 MySQL 表
+## 备份特定的 MySQL 表
 匹配您的输入以符合以下 mysqldump 命令结构：
 ```shell
 mysqldump [options] db_name [table_name ...]
@@ -115,14 +115,14 @@ mysqldump -u username -p db_cooper mystery cash > file_name.sql
 然后，您将为数据库用户提供密码，因为该密码不会与标志一起传递。
 该字符">"表示将创建转储文件的输出重定向。这里是最终文件的名称：file_name
 
-## 通过 mysqldump 备份单个 MySQL 表
+## 备份单个 MySQL 表
 如上一节所述，您可以通过在数据库名称后列出单个表来导出该表。
 
 以下示例用于备份名为 mystery 的表，数据库的名称为 db_cooper
 ```shell
 mysqldump -u username -p db_cooper mystery > file_name.sql
 ```
-## 通过 mysqldump 备份特定的 MySQL 数据库
+## 备份特定的 MySQL 数据库
 导出数据库的步骤与导出表的步骤非常接近。命令的格式只是发生了一个小的变化。
 
 匹配您的输入以符合以下 mysqldump 命令结构：
@@ -133,7 +133,7 @@ mysqldump -u username -p --databases db_larry db_curly db_moe > file_name.sql
 
 ⚠️ 空格字符分隔多个数据库。
 
-## 通过 mysqldump 备份单个 MySQL 数据库
+## 备份单个 MySQL 数据库
 与导出多个数据库非常相似，您只需指定一个数据库名称。
 
 匹配您的输入以符合以下 mysqldump 命令结构：
