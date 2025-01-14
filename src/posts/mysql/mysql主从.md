@@ -2,7 +2,7 @@
 title: mysql 主从
 icon: pen-to-square
 date: 2025-01-14
-cover: https://fastcdn.mihoyo.com/content-v2/hk4e/126888/1a1017906928ccf282455abd007ab356_8943004632492912906.png
+cover: https://fastcdn.mihoyo.com/content-v2/hk4e/127616/fe1da72a75427bb2fcc15c9d25ab1a55_5884844607579486920.png
 lastUpdated: true
 category:
   - mysql
