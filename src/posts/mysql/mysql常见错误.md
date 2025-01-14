@@ -4,6 +4,9 @@ icon: pen-to-square
 date: 2025-01-13
 cover: https://fastcdn.mihoyo.com/content-v2/hk4e/127622/e03b719f827eba22de2b3e4de1778f19_443214802071996334.png
 lastUpdated: true
+author: 
+    - name: Laurent Lemaire
+      url: https://twitter.com/lem01
 category:
   - mysql
 

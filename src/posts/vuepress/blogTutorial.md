@@ -5,6 +5,7 @@ cover: https://webstatic.mihoyo.com/upload/contentweb/2022/07/04/cb95a5b5d57165a
 date: 2025-01-12
 lastUpdated: true
 order: 1
+isOriginal: true
 author: 
     - name: xuyong
       url: https://github.com/coder-xuyong
