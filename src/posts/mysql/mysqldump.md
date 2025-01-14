@@ -4,7 +4,7 @@ icon: pen-to-square
 date: 2025-01-13
 cover: https://fastcdn.mihoyo.com/content-v2/hk4e/126888/1a1017906928ccf282455abd007ab356_8943004632492912906.png
 lastUpdated: true
-isOriginal: false
+isOriginal: true
 category:
   - mysql
 
