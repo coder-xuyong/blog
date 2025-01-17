@@ -91,6 +91,10 @@ export default hopeTheme({
       MarkDown:{
         icon:"https://markdownlivepreview.com/favicon.png",
         link:"https://theme-hope.vuejs.press/zh/cookbook/markdown/"
+      },
+      ProcessOn:{
+        icon:"https://www.processon.com/v5_editor/static/assets/images/logo-react.svg",
+        link:"https://www.processon.com/"
       }
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
