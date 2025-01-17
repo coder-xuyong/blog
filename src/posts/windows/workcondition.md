@@ -32,6 +32,8 @@ taskkill -pid 24548 -f
 ```
 
 ## windows 启动 jar包
+
+案例一：
 ```shell
 @echo off
 setlocal
@@ -47,6 +49,26 @@ REM 启动Java应用程序
 "%JAVA_PATH%" -jar "%JAR_FILE%" --server.port=10086
 endlocal
 PAUSE
+```
+
+
+案例二：
+```shell
+@echo off
+REM 指定 JAR 包的名称和日志输出文件
+set JAR_NAME=datatransport-0.0.1-SNAPSHOT.jar
+
+REM 检查是否有相同的进程在运行
+for /f "tokens=1" %%i in ('jps -l ^| findstr %JAR_NAME%') do (
+    echo The application is already running with PID %%i.
+    exit /b 1
+)
+
+REM 启动 JAR 包，后台运行并输出日志
+start /b ./jdk1.8.0_351/jre/bin/javaw -jar %JAR_NAME%
+
+echo %JAR_NAME% started.
+exit /b 0
 ```
 ## windows 停止 jar包
 1.根据端口号停止服务
