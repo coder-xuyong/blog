@@ -242,6 +242,20 @@ mysql -u root -pYOUR_PASSWORD destination_db < single_table_dump.sql
 ```
 就是这样！现在，您拥有了 MySQL 服务器的完整备份。
 
+### 备份和恢复多个 MySQL 表
+```shell
+mysqldump -u username -p db_cooper my_table1 my_table2 > single_table_dump.sql
+```
+
+额外：`>>` 表示追加到 XX 文件里面。可以云 `>` 一起用，两个语句可以用 && 连起来
+eg：
+
+```shell
+mysqldump -u username -p db_cooper my_table1 my_table2 > single_table_dump.sql && mysqldump -u username -p db_cooper my_table3 my_table4 >> single_table_dump.sql
+```
+
+上述表的导出是按顺序执行，而不是并行的。
+
 ## 高级 mysqldump 提示和技巧
 ### mysqldump --quick 标志有什么作用？
 Mysqldump 可以通过以下两种方式之一运行。
