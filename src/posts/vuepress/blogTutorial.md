@@ -33,7 +33,32 @@ star: true
 
 最好装 2X 的版本
 
-下载地址：https://code.visualstudio.com/
+下载地址：https://nodejs.org/zh-cn
+
+### 可能会遇见的问题
+```shell
+npm : 无法加载文件 D:\Program Files\nodejs\npm.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 1
++ npm -v
++ ~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+解决方法：使用管理员运行 powershell，运行以下命令
+```shell
+PS C:\WINDOWS\system32> get-ExecutionPolicy
+Restricted
+PS C:\WINDOWS\system32> set-ExecutionPolicy RemoteSigned
+
+执行策略更改
+执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=135170
+中的 about_Execution_Policies 帮助主题所述。是否要更改执行策略?
+[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 暂停(S)  [?] 帮助 (默认值为“N”): Y
+PS C:\WINDOWS\system32> get-ExecutionPolicy
+RemoteSigned
+PS C:\WINDOWS\system32>
+```
+
 
 ## 创建项目
 
