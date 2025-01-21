@@ -58,8 +58,29 @@ PS C:\WINDOWS\system32> get-ExecutionPolicy
 RemoteSigned
 PS C:\WINDOWS\system32>
 ```
+### 使用 vite 打包可能会遇见的问题
+```shell
+E:\workspace_mine\blog> npm run docs:build
 
+> blog@1.0.0 docs:build  
+> vuepress-vite build src
 
+✔ Initializing and preparing data - done in 28.21s
+x Build failed in 13.23s
+✖ Compiling with vite - failed in 13.48s
+error [vite]: Rollup failed to resolve import "img/0031.jpg" from "E:/workspace_mine/blog/src/.vuepress/.temp/pages/posts/java/netty/Netty03-进阶.html.vue".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteWarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51216:17)
+    at onRollupWarning (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51248:5)
+    at onwarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:50914:7)
+    at file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:19606:13
+    at Object.logger [as onLog] (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:21329:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:20218:26)
+```
+
+解决方案：使用绝对路径或者相对路径。路径规范比webpack严格
 ## 创建项目
 
 在cmd中切换到一个目录，执行命令`npm init vuepress-theme-hope@latest my-docs`，会出现下面的过程：
