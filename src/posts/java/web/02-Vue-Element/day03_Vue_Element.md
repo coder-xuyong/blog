@@ -410,7 +410,7 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
                      <td>1</td>
                      <td>Tom</td>
                      <td>
-                         <img src="" width="70px" height="50px">
+                         <img src="./" width="70px" height="50px">
                      </td>
                      <td>
                          <span>男</span>

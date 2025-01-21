@@ -43,7 +43,7 @@ Maven高级内容包括:
 
 **1). 未分模块设计的问题**
 
-<img src="assets/image-20230113090241470.png" alt="image-20230113090241470" style="zoom:67%;" /> 
+<img src="./assets/image-20230113090241470.png" alt="image-20230113090241470" style="zoom:67%;" /> 
 
 如果项目不分模块，也就意味着所有的业务代码是不是都写在这一个 Java 项目当中。随着这个项目的业务扩张，项目当中的业务功能可能会越来越多。
 
@@ -120,7 +120,7 @@ Maven高级内容包括:
 
 A. 创建一个正常的Maven模块，模块名tlias-pojo
 
-<img src="assets/image-20230113100500382.png" alt="image-20230113100500382" style="zoom: 60%;" /> <img src="assets/image-20230113100756843.png" alt="image-20230113100756843" style="zoom: 60%;" /> 
+<img src="./assets/image-20230113100500382.png" alt="image-20230113100500382" style="zoom: 60%;" /> <img src="./assets/image-20230113100756843.png" alt="image-20230113100756843" style="zoom: 60%;" /> 
 
 
 
@@ -168,7 +168,7 @@ E. 删除原有案例项目tlias-web-management的pojo包【直接删除不要�
 
 A. 创建一个正常的Maven模块，模块名tlias-utils
 
-<img src="assets/image-20230113100500382.png" alt="image-20230113100500382" style="zoom: 60%;" />  <img src="assets/image-20230113101816151.png" alt="image-20230113101816151" style="zoom:67%;" /> 
+<img src="./assets/image-20230113100500382.png" alt="image-20230113100500382" style="zoom: 60%;" />  <img src="./assets/image-20230113101816151.png" alt="image-20230113101816151" style="zoom:67%;" /> 
 
 
 
@@ -271,7 +271,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 在案例项目分模块开发之后啊，我们会看到tlias-pojo、tlias-utils、tlias-web-management中都引入了一个依赖 lombok 的依赖。我们在三个模块中分别配置了一次。
 
-<img src="assets/image-20230113103714055.png" alt="image-20230113103714055" style="zoom:80%;" /> 
+<img src="./assets/image-20230113103714055.png" alt="image-20230113103714055" style="zoom:80%;" /> 
 
 如果是做一个大型的项目，这三个模块当中重复的依赖可能会很多很多。如果每一个 Maven 模块里面，我们都来单独的配置一次，功能虽然能实现，但是配置是比较**繁琐**的。
 
@@ -332,7 +332,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 1). 创建maven模块 tlias-parent ，该工程为父工程，设置打包方式pom(默认jar)。
 
-​	<img src="assets/image-20230113112712232.png" alt="image-20230113112712232" style="zoom:67%;" /> <img src="assets/image-20230113112810295.png" alt="image-20230113112810295" style="zoom:67%;" /> 
+​	<img src="./assets/image-20230113112712232.png" alt="image-20230113112712232" style="zoom:67%;" /> <img src="./assets/image-20230113112810295.png" alt="image-20230113112810295" style="zoom:67%;" /> 
 
 工程结构如下：
 
@@ -697,7 +697,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 分模块设计与开发之后啊，我们的项目被拆分为多个模块，而模块之间的关系，可能错综复杂。 那就比如我们当前的案例项目，结构如下（相对还是比较简单的）：
 
-<img src="assets/image-20230113142520463.png" alt="image-20230113142520463" style="zoom:67%;" /> 
+<img src="./assets/image-20230113142520463.png" alt="image-20230113142520463" style="zoom:67%;" /> 
 
 此时，tlias-web-management 模块的父工程是 tlias-parent，该模块又依赖了tlias-pojo、tlias-utils模块。 那此时，我们要想将 tlias-web-management 模块打包，是比较繁琐的。因为在进行项目打包时，maven会从本地仓库中来查找tlias-parent父工程，以及它所依赖的模块tlias-pojo、tlias-utils，而本地仓库目前是没有这几个依赖的。
 
@@ -709,7 +709,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 #### 2.2.1 介绍
 
-<img src="assets/image-20230113151533948.png" alt="image-20230113151533948" style="zoom:80%;" /> 
+<img src="./assets/image-20230113151533948.png" alt="image-20230113151533948" style="zoom:80%;" /> 
 
 - **聚合：**将多个模块组织成一个整体，同时进行项目的构建。
 - **聚合工程：**一个不具有业务功能的“空”工程（有且仅有一个pom文件） 【PS：一般来说，继承关系中的父工程与聚合关系中的聚合工程是同一个】
@@ -784,13 +784,13 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 假设现在有两个团队，A 和 B。 A 开发了一个模块 tlias-utils，模块开发完毕之后，将模块打成jar包，并安装到了A的本地仓库。
 
-<img src="assets/image-20230113155325805.png" alt="image-20230113155325805" style="zoom:80%;" /> 
+<img src="./assets/image-20230113155325805.png" alt="image-20230113155325805" style="zoom:80%;" /> 
 
 
 
 那此时，该公司的B团队开发项目时，要想使用 tlias-utils 中提供的工具类，该怎么办呢？ 对于maven项目来说，是不是在pom.xml文件中引入 tlias-utils的坐标就可以了呢？
 
-<img src="assets/image-20230113155657972.png" alt="image-20230113155657972" style="zoom:80%;" />  
+<img src="./assets/image-20230113155657972.png" alt="image-20230113155657972" style="zoom:80%;" />  
 
 大家可以思考一下，当B团队在maven项目的pom.xml配置文件中引入了依赖的坐标之后，maven是如何查找这个依赖的？ 查找顺序为：
 
@@ -802,7 +802,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 因为目前tlias-utils这个依赖，还在A的本地仓库中的。 B电脑上的maven项目，是不可能找得到A电脑上maven本地仓库的jar包的。  那此时，大家可能会有一个想法：因为A和B都会连接中央仓库，我们可以将A本地仓库的jar包，直接上传到中央仓库，然后B从中央仓库中下载tlias-utils这个依赖。
 
-<img src="assets/image-20230113160351850.png" alt="image-20230113160351850" style="zoom:67%;" /> 
+<img src="./assets/image-20230113160351850.png" alt="image-20230113160351850" style="zoom:67%;" /> 
 
 这个想法很美好，但是现实很残酷。这个方案是行不通的，因为中央仓库全球只有一个，不是什么人都可以往中央仓库中来上传jar包的，我们是没有权限操作的。
 
@@ -812,7 +812,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 有了私服之后，各个团队就可以直接来连接私服了。 A 连接上私服之后，他就可以把jar包直接上传到私服当中。我公司自己内部搭建的服务器，我是不是有权限操作呀，把jar包上传到私服之后，我让 B 团队的所有开发人员也连接同一台私服。连接上这一台私服之后，他就会根据坐标的信息，直接从私服当中将对应的jar包下载到自己的本地仓库，这样就可以使用到依赖当中所提供的一些工具类了。这样我们就可以通过私服来完成资源的共享。
 
-<img src="assets/image-20230113160713806.png" alt="image-20230113160713806" style="zoom:80%;" /> 
+<img src="./assets/image-20230113160713806.png" alt="image-20230113160713806" style="zoom:80%;" /> 
 
 而如果我们在项目中需要使用其他第三方提供的依赖，如果本地仓库没有，也会自动连接私服下载，如果私服没有，私服此时会自动连接中央仓库，去中央仓库中下载依赖，然后将下载的依赖存储在私服仓库及本地仓库中。
 
@@ -835,7 +835,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 #### 3.3.1 步骤分析
 
-<img src="assets/image-20230113163307239.png" alt="image-20230113163307239" style="zoom:80%;" /> 
+<img src="./assets/image-20230113163307239.png" alt="image-20230113163307239" style="zoom:80%;" /> 
 
 资源上传与下载，我们需要做三步配置，执行一条指令。
 
@@ -870,7 +870,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 为了模拟企业开发，这里我准备好了一台服务器（192.168.150.101），私服已经搭建好了，我们可以访问私服测试：http://192.168.150.101:8081
 
-<img src="assets/image-20230113164217830.png" alt="image-20230113164217830" style="zoom:80%;" /> 
+<img src="./assets/image-20230113164217830.png" alt="image-20230113164217830" style="zoom:80%;" /> 
 
 
 

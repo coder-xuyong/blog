@@ -968,7 +968,7 @@ public interface DeptMapper {
 
 #### 2.4.1 需求
 
-<img src="assets/image-20220904150427982.png" style="zoom:80%;" />
+<img src="./assets/image-20220904150427982.png" style="zoom:80%;" />
 
 点击 "新增部门" 按钮，弹出新增部门对话框，输入部门名称，点击 "保存" ，将部门信息保存到数据库。
 

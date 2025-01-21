@@ -888,7 +888,7 @@ public class UploadController {
 
 ![image-20220904220001994](assets/image-20220904220001994.png)
 
- <img src="assets/image-20220904220006578.png" style="zoom: 50%;" />
+ <img src="./assets/image-20220904220006578.png" style="zoom: 50%;" />
 
 在进行修改员工信息的时候，我们首先先要根据员工的ID查询员工的信息用于页面回显展示，然后用户修改员工数据之后，点击保存按钮，就可以将修改的数据提交到服务端，保存到数据库。 具体操作为：
 
@@ -1071,7 +1071,7 @@ public class EmpController {
 
 ### 3.2 修改员工
 
-<img src="assets/image-20220904220006578.png" style="zoom:67%;" />
+<img src="./assets/image-20220904220006578.png" style="zoom:67%;" />
 
 > 当用户修改完数据之后，点击保存按钮，就需要将数据提交到服务端，然后服务端需要将修改后的数据更新到数据库中。 
 
@@ -1294,7 +1294,7 @@ public class EmpController {
 
 ### 4.1 参数配置化
 
-<img src="assets/image-20221231085558457.png" alt="image-20221231085558457" style="zoom: 80%;" />
+<img src="./assets/image-20221231085558457.png" alt="image-20221231085558457" style="zoom: 80%;" />
 
 在我们之前编写的程序中进行文件上传时，需要调用AliOSSUtils工具类，将文件上传到阿里云OSS对象存储服务当中。而在调用工具类进行文件上传时，需要一些参数：
 
