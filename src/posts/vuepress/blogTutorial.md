@@ -58,29 +58,7 @@ PS C:\WINDOWS\system32> get-ExecutionPolicy
 RemoteSigned
 PS C:\WINDOWS\system32>
 ```
-### 使用 vite 打包可能会遇见的问题
-```shell
-E:\workspace_mine\blog> npm run docs:build
 
-> blog@1.0.0 docs:build  
-> vuepress-vite build src
-
-✔ Initializing and preparing data - done in 28.21s
-x Build failed in 13.23s
-✖ Compiling with vite - failed in 13.48s
-error [vite]: Rollup failed to resolve import "img/0031.jpg" from "E:/workspace_mine/blog/src/.vuepress/.temp/pages/posts/java/netty/Netty03-进阶.html.vue".
-This is most likely unintended because it can break your application at runtime.
-If you do want to externalize this module explicitly add it to
-`build.rollupOptions.external`
-    at viteWarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51216:17)
-    at onRollupWarning (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51248:5)
-    at onwarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:50914:7)
-    at file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:19606:13
-    at Object.logger [as onLog] (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:21329:9)
-    at ModuleLoader.handleInvalidResolvedId (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:20218:26)
-```
-
-解决方案：使用绝对路径或者相对路径。路径规范比webpack严格
 ## 创建项目
 
 在cmd中切换到一个目录，执行命令`npm init vuepress-theme-hope@latest my-docs`，会出现下面的过程：
@@ -128,6 +106,60 @@ added 766 packages in 41s
 success VuePress webpack dev server is listening at http://localhost:8080/
 webpack compiled successfully
 ```
+
+## 修改 webpack 打包方式为 vite
+先删除`package.json`里面的`"@vuepress/bundler-vite": "^2.0.0-rc.19"`，然后下载 vite
+```shell
+npm i -D @vuepress/bundler-vite@next
+```
+最后修改打包方式为：
+```shell
+"scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "npx vp-update"
+  },
+```
+
+可在 config.ts 中引入配置，方便自定义。如下：
+
+```shell
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defineUserConfig } from 'vuepress'
+
+export default defineUserConfig({
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
+})
+```
+
+
+### 使用 vite 打包可能会遇见的问题
+```shell
+E:\workspace_mine\blog> npm run docs:build
+
+> blog@1.0.0 docs:build  
+> vuepress-vite build src
+
+✔ Initializing and preparing data - done in 28.21s
+x Build failed in 13.23s
+✖ Compiling with vite - failed in 13.48s
+error [vite]: Rollup failed to resolve import "img/0031.jpg" from "E:/workspace_mine/blog/src/.vuepress/.temp/pages/posts/java/netty/Netty03-进阶.html.vue".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteWarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51216:17)
+    at onRollupWarning (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:51248:5)
+    at onwarn (file:///E:/workspace_mine/blog/node_modules/vite/dist/node/chunks/dep-DP_yvx5y.js:50914:7)
+    at file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:19606:13
+    at Object.logger [as onLog] (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:21329:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///E:/workspace_mine/blog/node_modules/rollup/dist/es/shared/node-entry.js:20218:26)
+```
+
+解决方案：使用绝对路径或者相对路径。路径规范比webpack严格
 
 ## 创建 GitHub 仓库
 1.创建名为 blog 的仓库，选择 public
