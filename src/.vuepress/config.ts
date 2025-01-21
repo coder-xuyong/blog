@@ -1,12 +1,17 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
+import { viteBundler } from '@vuepress/bundler-vite'
 // import { searchPlugin } from "@vuepress/plugin-search";
 // import { cut } from 'nodejs-jieba'
 // import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
   base: "/blog/",
   lang: "zh-CN",
   title: "coder-xuyong",
