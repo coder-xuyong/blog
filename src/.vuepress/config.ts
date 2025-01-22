@@ -9,9 +9,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   bundler: viteBundler({
-    viteOptions: {
-      
-    },
+    viteOptions: {},
     vuePluginOptions: {},
   }),
   base: "/blog/",
