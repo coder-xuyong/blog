@@ -18,11 +18,18 @@ export default sidebar({
     //   link: "demo/page",
     // },
     {
+      text: "java",
+      icon: "laptop-code",
+      prefix: "posts/java/basic/",
+      children: "structure",
+    },
+    {
       text: "文章",
       icon: "book",
       prefix: "posts/",
       children: "structure",
     },
+   
     // {
     //   text: "幻灯片",
     //   icon: "person-chalkboard",
