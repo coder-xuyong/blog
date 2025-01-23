@@ -14,9 +14,7 @@ tag:
   - java-basic
 ---
 
-logback 的使用
 
-<!-- more -->
 # 日志
 
 ## 1.1 作用：
