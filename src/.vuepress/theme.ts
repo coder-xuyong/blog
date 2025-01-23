@@ -31,7 +31,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "我虽无意逐鹿 却知苍生苦楚",
+  footer: "coder-xuyong 的小破站",
   displayFooter: true,
   // copyright: true,
   // copyright: "自定义版权信息",

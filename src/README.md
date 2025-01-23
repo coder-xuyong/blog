@@ -42,7 +42,7 @@ projects:
   #   desc: 自定义详细介绍
   #   link: https://你的自定义链接
 
-footer: 我虽无意逐鹿 却知苍生苦楚
+footer: coder-xuyong 的小破站
 ---
 
 <!-- 这是一个博客主页的案例。

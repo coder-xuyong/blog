@@ -17,8 +17,6 @@ tag:
 
 ---
 
-mysqldump 的使用
-<!-- more -->
 
 
 ## mysqldump 介绍
