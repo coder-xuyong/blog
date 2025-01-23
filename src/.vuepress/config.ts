@@ -18,7 +18,7 @@ export default defineUserConfig({
   description: "以 vuepress-theme-hope 为模板的博客",
   theme:theme,  
   // 文章显示和隐藏规则
-  pagePatterns:['!**/_*.md','**/*.md'],
+  pagePatterns:['**/*.md','!**/_*.md'],
   head: [
     [
       "script",
