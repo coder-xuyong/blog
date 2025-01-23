@@ -17,7 +17,7 @@ export default defineUserConfig({
   title: "coder-xuyong",
   description: "以 vuepress-theme-hope 为模板的博客",
   theme:theme,  
-  // 文章显示和隐藏规则
+  // 文章显示和隐藏规则,github pages 要将隐藏的放在后面，也就是索引 1 才有效
   pagePatterns:['**/*.md','!**/_*.md'],
   head: [
     [
