@@ -29,6 +29,22 @@ export default navbar([
     },{ text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
     ]
   },
+  {
+    text: "AI相关",
+    icon: "fa-solid fa-hexagon-nodes",
+    prefix: "/posts/java/",
+    children: [{
+      text: "netty",
+      prefix: "netty/",
+      children: [
+        "Netty01-nio",
+        "Netty02-入门",
+        "Netty03-进阶",
+        "Netty04-优化与源码",
+      ]
+    }
+    ]
+  },
 
   // "/posts/markdown.md",
   // "/demo/",

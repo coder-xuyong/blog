@@ -8,6 +8,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
+  port:8081,
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
