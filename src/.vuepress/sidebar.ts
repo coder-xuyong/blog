@@ -19,14 +19,23 @@ export default sidebar({
     // },
     {
       text: "java",
-      icon: "laptop-code",
-      prefix: "posts/java/basic/",
+      icon: "fa-brands fa-java",
+      prefix: "posts/java/",
+      collapsible: true,
       children: "structure",
+    },
+    {
+      text: "AI",
+      icon: "fa-brands fa-airbnb",
+      prefix: "posts/AI/",
+      collapsible: true,
+      children: "structure",  
     },
     {
       text: "文章",
       icon: "book",
       prefix: "posts/",
+      collapsible: true,
       children: "structure",
     },
    

@@ -3,7 +3,14 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   ,
-  { text: "java 基础", icon: "https://www.java.com/favicon.ico", link: "/posts/java/basic/" },
+  { text: " java ", 
+    icon: "https://www.java.com/favicon.ico", 
+    prefix: "/posts/java/", 
+    children: [
+      { text: 'JavaSE', link: '01-JavaSE/' },
+      { text: 'JavaEE', link: '02-JavaSE/' },
+    ] 
+  },
   { text: "spring", icon: "https://docs.spring.io/spring-boot/_/img/favicon.ico", link: "/posts/java/spring/" },
   {
     text: "框架",
@@ -26,7 +33,7 @@ export default navbar([
       children: [
         "spring",
       ]
-    },{ text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
+    }, { text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
     ]
   },
   {
