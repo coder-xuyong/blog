@@ -8,7 +8,12 @@ import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
-  port:8081,
+  //以下三个参数均为本地测试环境，不会影响线上环境
+  host: '0.0.0.0',
+  //此端口为本地端口
+  port:54088,
+  //启动之后是否打开浏览器
+  open: true,
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
