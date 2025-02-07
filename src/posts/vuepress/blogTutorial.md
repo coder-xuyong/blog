@@ -21,7 +21,7 @@ sticky: true
 star: true
 ---
 
-白嫖！记录 vuepress 搭建博客部署到 GitHub pages 的过程
+记录 vuepress 搭建博客部署到 GitHub pages 的过程
 
 <!-- more -->
 
