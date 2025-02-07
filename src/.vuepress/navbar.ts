@@ -32,15 +32,13 @@ export default navbar([
   {
     text: "AI相关",
     icon: "fa-solid fa-hexagon-nodes",
-    prefix: "/posts/java/",
+    prefix: "/posts/",
     children: [{
-      text: "netty",
-      prefix: "netty/",
+      text: "AI",
+      prefix: "AI/",
       children: [
-        "Netty01-nio",
-        "Netty02-入门",
-        "Netty03-进阶",
-        "Netty04-优化与源码",
+        "AI入门",
+        "deepseek本地搭建",
       ]
     }
     ]

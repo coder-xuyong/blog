@@ -13,7 +13,7 @@ export default defineUserConfig({
   //此端口为本地端口
   port:54088,
   //启动之后是否打开浏览器
-  open: true,
+  open: false,
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
