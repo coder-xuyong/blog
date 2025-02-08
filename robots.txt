@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://coder-xuyong.github.io/blog/blog/sitemap.xml
+Sitemap: https://coder-xuyong.github.io/blog/sitemap.xml
