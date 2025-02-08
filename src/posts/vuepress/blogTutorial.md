@@ -4,7 +4,7 @@ icon: pen-to-square
 cover: https://webstatic.mihoyo.com/upload/contentweb/2022/07/04/cb95a5b5d57165a4970d801c5dcf0435_8788044469681939890.png
 date: 2025-01-12
 lastUpdated: true
-order: 1
+order: 2
 isOriginal: true
 author: 
     - name: xuyong
