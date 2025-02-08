@@ -18,7 +18,7 @@ export default defineUserConfig({
     viteOptions: {},
     vuePluginOptions: {},
   }),
-  base: "/blog/",
+  base: "/",
   lang: "zh-CN",
   title: "coder-xuyong",
   description: "以 vuepress-theme-hope 为模板的博客",

@@ -1,5 +1,5 @@
 ---
-title: Markdown 使用过程中遇到的问题记录
+title: 记录 Markdown 遇到的问题
 icon: pen-to-square
 cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/16cff1c00f651f98427fc3fbab7fc855_1013342926215826750.png
 date: 2025-02-07
