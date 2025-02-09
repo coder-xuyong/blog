@@ -1,5 +1,5 @@
 ---
-title: 使用cdn提升blog的访问速度
+title: 使用cdn提升网站的访问速度
 icon: pen-to-square
 date: 2025-02-09
 lastUpdated: true
