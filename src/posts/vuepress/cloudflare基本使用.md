@@ -18,7 +18,7 @@ tag:
   - cloudflare
 sticky: false
 # 此页面会出现在星标文章中
-star: false
+star: true
 ---
 
 
