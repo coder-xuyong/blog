@@ -4,10 +4,10 @@ export default navbar([
   "/",
   { text: " java ", 
     icon: "https://www.java.com/favicon.ico", 
-    prefix: "/posts/java/", 
+    prefix: "/posts/01.Java/", 
     children: [
-      { text: 'JavaSE', link: '01-JavaSE/' },
-      { text: 'JavaEE', link: '02-JavaSE/' },
+      { text: 'JavaSE', link: '01.JavaSE/' },
+      { text: 'JavaEE', link: '02.JavaSE/' },
     ] 
   },
   { text: "spring", icon: "https://docs.spring.io/spring-boot/_/img/favicon.ico", link: "/posts/java/spring/" },

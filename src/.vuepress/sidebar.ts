@@ -20,7 +20,7 @@ export default sidebar({
     {
       text: "java",
       icon: "fa-brands fa-java",
-      prefix: "posts/java/",
+      prefix: "posts/01.Java/",
       collapsible: true,
       children: "structure",
     },
