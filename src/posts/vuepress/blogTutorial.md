@@ -164,7 +164,7 @@ If you do want to externalize this module explicitly add it to
 ## 创建 GitHub 仓库
 1.创建名为 blog 的仓库，选择 public
 2.创建完成仓库后，创建一个新的分支 blog_pages ,用于存放编译打包后的静态文件
-3.完成新分支的创建后，进入 blog 的 setting，选在 pages 菜单，选择 blog_pages 分支映射为可访问的静态站点。
+3.完成新分支的创建后，进入 blog 的 settings，选择 pages 菜单，选择 Build and deployment 下的 Branch 中，选中 blog_pages 分支映射为可访问的静态站点。
 4.上述执行完成后，稍等一会儿，访问：https://GitHub用户名.github.io/blog/ 就可以访问了。
 
 ## 新增 Access Token 
@@ -186,7 +186,7 @@ If you do want to externalize this module explicitly add it to
           branch: blog_pages
           folder: src/.vuepress/dist
 ```
-在blog/src/config.ts 里面修改 base："/blog/",
+在blog/src/.vuepress/config.ts 里面修改 base："/blog/",
 
 ```shell
 export default defineUserConfig({
@@ -206,4 +206,4 @@ https://theme-hope.vuejs.press/zh/
 
 ## 参考
 
-> https://www.bilibili.com/video/BV16Z4heUEgi/?spm_id_from=333.1391.0.0&vd_source=963c8f327c417497fa7a2e119c546395
+> https://www.bilibili.com/video/BV16Z4heUEgi
