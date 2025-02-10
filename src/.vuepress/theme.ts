@@ -39,7 +39,7 @@ export default hopeTheme({
   navbarLayout: {
     start: ["Brand"],
     // center: ["Links"],
-    end: ["Links", "Repo", "Outlook", "Search"],
+    end: ["Links", "Repo", "Search"],
   },
 
   // 博客相关
