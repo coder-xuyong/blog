@@ -1,5 +1,5 @@
 ---
-title: blog 搭建教程
+title: 从零开始搭建静态网站blog教程
 icon: pen-to-square
 cover: https://webstatic.mihoyo.com/upload/contentweb/2022/07/04/cb95a5b5d57165a4970d801c5dcf0435_8788044469681939890.png
 date: 2025-01-12
@@ -21,7 +21,7 @@ sticky: true
 star: true
 ---
 
-记录 vuepress 搭建博客部署到 GitHub pages 的过程
+记录**从零开始**，使用 vuepress 搭建博客部署到 GitHub pages 的过程
 
 <!-- more -->
 
