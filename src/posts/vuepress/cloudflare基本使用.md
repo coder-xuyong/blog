@@ -25,17 +25,7 @@ star: true
 ## cdn 概述和分析
 通过 CDN（内容分发网络）将静态资源缓存到全球节点，显著提升访问速度。
 
-1. Cloudflare 加速
-
-优点：免费，全球节点多，支持 HTTPS。
-
-注意：国内用户访问 Cloudflare 节点可能仍有延迟，但对海外用户效果显著。
-
-2. 国内 CDN 服务（需备案）
-如果用户主要在国内，可使用阿里云、腾讯云 CDN，但需域名备案。备案特别麻烦，主要是需要花钱，可以参考：https://blog.csdn.net/lion_no_back/article/details/131075457
-
-
-综上，使用 cdn  提升 github pages 访问速度慢的问题，对比国内（腾讯、阿里云）和国外 cloudflare ，最终选择使用 cloudflare。
+因此可使用 cdn  提升 github pages 访问速度慢的问题。
 
 
 
