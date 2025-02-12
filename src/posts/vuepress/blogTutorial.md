@@ -203,6 +203,9 @@ export default defineUserConfig({
 ## 后续修改就查看 vuepress 官网进行修改
 https://theme-hope.vuejs.press/zh/
 
+### 自定义 footer
+
+查看：https://theme-hope.vuejs.press/zh/guide/advanced/replace.html
 
 ## 参考
 

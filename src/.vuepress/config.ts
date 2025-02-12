@@ -41,8 +41,12 @@ export default defineUserConfig({
 
 alias: {
     // "@DemoComponent": path.resolve(__dirname, "components/Demo.vue"),
+    "@theme-hope/components/PageFooter": path.resolve(
+      __dirname,
+      "./components/MyFooter.vue",
+    ),
       // 替换默认的 Footer 组件
-      "@theme-hope/components/PageFooter": "./components/MyFooter.vue",
+      // "@theme-hope/components/PageFooter": "./components/MyFooter.vue",
       
   },
   // 和 PWA 一起启用
