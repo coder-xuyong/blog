@@ -4,7 +4,6 @@ import sidebar from "./sidebar.js";
 // import { cut } from 'nodejs-jieba'
 export default hopeTheme({
   hostname: "https://coder-xuyong.github.io/blog/",
-
   author: {
     name: "xuyong",
     url: "https://github.com/coder-xuyong",

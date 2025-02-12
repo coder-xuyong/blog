@@ -6,7 +6,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 // import { cut } from 'nodejs-jieba'
 // import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 
-const __dirname = getDirname(import.meta.url);
+// const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   //以下三个参数均为本地测试环境，不会影响线上环境
   host: '0.0.0.0',
@@ -40,7 +40,10 @@ export default defineUserConfig({
   ],
 
 alias: {
-    "@DemoComponent": path.resolve(__dirname, "components/Demo.vue"),
+    // "@DemoComponent": path.resolve(__dirname, "components/Demo.vue"),
+      // 替换默认的 Footer 组件
+      "@theme-hope/components/PageFooter": "./components/MyFooter.vue",
+      
   },
   // 和 PWA 一起启用
   // shouldPrefetch: false,
