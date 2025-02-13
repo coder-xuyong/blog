@@ -26,8 +26,15 @@ export default sidebar({
     },
     {
       text: "mysql",
-      icon: "database",
+      icon: "fa-solid fa-database",
       prefix: "posts/02.mysql/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "linux",
+      icon: "fa-brands fa-linux",
+      prefix: "posts/03.linux/",
       collapsible: true,
       children: "structure",
     },
