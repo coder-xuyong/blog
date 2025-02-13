@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+  "compilerOptions": {//它是 TypeScript 项目的核心配置文件，定义了TypeScript 编译器如何处理源代码。
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES2022"
