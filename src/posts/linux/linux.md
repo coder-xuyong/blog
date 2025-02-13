@@ -14,6 +14,15 @@ linux 命令集
 
 <!-- more -->
 
+## 0.常用命令
+```shell
+ps -ef | grep Name 查找进程
+kill PID 结束进程
+pwdx PID 查看进程路径
+find /path/to/search -name "filename"
+tail -100f 文件名   查看文件尾部多少行，并且试试监控新写入的每行数据
+```
+
 ## 1.基本命令
 
 ```shell
