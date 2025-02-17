@@ -39,6 +39,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "network",
+      icon: "fa-solid fa-network-wired",
+      prefix: "posts/04.network/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "AI",
       icon: "fa-brands fa-airbnb",
       prefix: "posts/AI/",
