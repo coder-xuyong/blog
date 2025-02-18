@@ -10,6 +10,28 @@ export default navbar([
       { text: 'JavaEE', link: '02.JavaSE/' },
     ] 
   },
+  { text: " 数据库 ", 
+    icon: "fa-solid fa-database", 
+    prefix: "/posts/02.database/", 
+    children: [
+      {
+        text: "关系型数据库",
+        // icon: "pen-to-square",
+        prefix: "03.关系型数据库/",
+        children: [
+          { text: "mysql", icon: "https://labs.mysql.com/common/themes/sakila/favicon.ico", link: "02.Mysql/" },
+        ],
+      },
+      {
+        text: "kv数据库",
+        // icon: "pen-to-square",
+        prefix: "05.KV数据库/",
+        children: [
+          { text: "redis", icon: "https://www.redis.net.cn/Application/Home/View/Public/img/icon.png", link: "01.Redis/" },
+        ],
+      },
+    ] 
+  },
   { text: "spring", icon: "https://docs.spring.io/spring-boot/_/img/favicon.ico", link: "/posts/java/spring/" },
   {
     text: "框架",
