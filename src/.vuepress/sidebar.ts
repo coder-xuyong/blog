@@ -25,7 +25,7 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "mysql",
+      text: "database",
       icon: "fa-solid fa-database",
       prefix: "posts/02.database/",
       collapsible: true,

@@ -1,7 +1,10 @@
 ---
-icon: logos:redis
+icon: https://www.redis.net.cn/Application/Home/View/Public/img/icon.png
 title: Redis 教程
 date: 2020-02-10 14:27:39
+author: 
+    - name: 钝悟
+      url: https://dunwu.github.io/
 categories:
   - 数据库
   - KV数据库
@@ -10,7 +13,7 @@ tags:
   - 数据库
   - KV数据库
   - Redis
-permalink: /pages/83e307/
+permalinkPattern: :year/:month/:day/:slug.html
 hidden: true
 index: false
 ---
