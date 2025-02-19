@@ -1,13 +1,11 @@
 ---
 title: NIO 基础
-icon: pen-to-square
 # cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/4c4b8babc68ffedce9bd5766b60e1ae5_8781849729625946129.png
 date: 2024-07-24
 lastUpdated: true
 order: 1
 author: 
-    - name: xuyong
-    - name: 黑马程序员
+    - name: itheima
 category:
   - java
 tag:
@@ -15,14 +13,7 @@ tag:
   - nio
 ---
 
-non-blocking io 非阻塞 IO
 
-<!-- more -->
-
-<!-- 
-# 一. NIO 基础
-
-non-blocking io 非阻塞 IO -->
 
 ## 1. 三大组件
 
