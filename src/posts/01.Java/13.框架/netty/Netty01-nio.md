@@ -11,9 +11,12 @@ category:
 tag:
   - netty
   - nio
+permalinkPattern: :year/:month/:day/:slug.html  
 ---
 
+# 源码可下载
 
+源码路径：https://github.com/coder-xuyong/netty
 
 ## 1. 三大组件
 

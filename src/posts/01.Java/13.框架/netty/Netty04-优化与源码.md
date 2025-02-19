@@ -1,17 +1,15 @@
 ---
 title: 优化与源码
-icon: pen-to-square
-# cover: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/4c4b8babc68ffedce9bd5766b60e1ae5_8781849729625946129.png
 date: 2024-07-24
 lastUpdated: true
 order: 4
 author: 
-    - name: xuyong
-    - name: 黑马程序员
+    - name: itheima
 category:
   - java
 tag:
   - netty
+permalinkPattern: :year/:month/:day/:slug.html  
 ---
 
 优化与源码
