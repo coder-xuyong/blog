@@ -19,6 +19,7 @@ tag:
 sticky: false
 # 此页面会出现在星标文章中
 star: true
+permalinkPattern: :year/:month/:day/:slug.html
 ---
 
 

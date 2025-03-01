@@ -25,6 +25,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "mysql",
+      icon: "database",
+      prefix: "posts/02.mysql/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "AI",
       icon: "fa-brands fa-airbnb",
       prefix: "posts/AI/",
