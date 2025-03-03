@@ -46,6 +46,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "windows",
+      icon: "fa-brands fa-windows",
+      prefix: "posts/05.windows/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "AI",
       icon: "fa-brands fa-airbnb",
       prefix: "posts/AI/",
