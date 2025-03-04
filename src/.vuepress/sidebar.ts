@@ -59,13 +59,13 @@ export default sidebar({
       collapsible: true,
       children: "structure",  
     },
-    {
-      text: "文章",
-      icon: "book",
-      prefix: "posts/",
-      collapsible: true,
-      children: "structure",
-    },
+    // {
+    //   text: "文章",
+    //   icon: "book",
+    //   prefix: "posts/",
+    //   collapsible: true,
+    //   children: "structure",
+    // },
    
     // {
     //   text: "幻灯片",
