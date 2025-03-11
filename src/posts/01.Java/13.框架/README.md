@@ -107,7 +107,7 @@ index: false
 
 ### IO
 
-- [Netty](13.IO/01.Netty.md)
+- [Netty](13.IO/netty/Netty02-入门.md)
 
 ## 📚 资料
 
