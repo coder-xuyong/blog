@@ -1,12 +1,28 @@
 // you can change colors here
-// $vp-c-bg:(
-//     light: #f3f6f7,
-//     dark: #1b1b1f
-// );
+$vp-c-bg: (
+    light: #f3f6f7,
+    dark: #1b1b1f
+);
+.vp-page {  
+    background-color: white;
+    [data-theme="dark"] & {
+        background-color: #222 !important;
+      }
+}
+.vp-sidebar {
+    background-color: white;
+    [data-theme="dark"] & {
+        background-color: #222 !important;
+      }
+}
+// .blog-page-wrapper{
+// .vp-footer-wrapper {
+//     height: auto;
+//     background-image: url("./../public/assets/images/footer.webp");
+//     background-repeat: no-repeat;
+//     background-position: center;
+// }
 
-// [data-theme="dark"] & {
-//     .vp-page: #000;
-//   }
 // .vp-page {
 //     background-color:(
 //         light:white,
@@ -25,4 +41,3 @@
 //     light: #1b1b1f,
 //     dark: #f3f6f7
 // )
-
