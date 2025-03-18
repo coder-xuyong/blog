@@ -1,4 +1,4 @@
-import { navbar } from "vuepress-theme-hope";
+import { hopeTheme, navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",

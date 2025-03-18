@@ -1,6 +1,16 @@
 import { defineClientConfig } from "vuepress/client";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
-
+import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
+import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
+// import "vuepress-theme-hope/presets/left-blog-info.scss";
+import "vuepress-theme-hope/presets/squircle-blogger-avatar.scss";
+import "vuepress-theme-hope/presets/bounce-icon.scss";
+// 隐藏导航栏图标
+// import "vuepress-theme-hope/presets/hide-navbar-icon.scss";
+//隐藏侧边栏图标
+// import "vuepress-theme-hope/presets/hide-sidebar-icon.scss";
+// 为所有 hr 元素添加驾驶的车图标
+import "vuepress-theme-hope/presets/hr-driving-car.scss"
 export default defineClientConfig({
   setup() {
     setupRunningTimeFooter(
@@ -12,5 +22,6 @@ export default defineClientConfig({
       },
       true,
     );
+    setupSnowFall();
   },
 });

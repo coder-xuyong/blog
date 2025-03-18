@@ -9,7 +9,9 @@ export default hopeTheme({
     url: "https://github.com/coder-xuyong",
   },
 
+  // 修改 icon 来源
   iconAssets: "fontawesome-with-brands",
+  // iconAssets: "iconify",
 
   logo: "/logo.svg",
 
@@ -77,7 +79,11 @@ export default hopeTheme({
       },
       fontawesome:{
         icon: "https://fontawesome.com/favicon.ico",
-        link:"https://fontawesome.com/search?o=r&m=free",
+        link:"https://fontawesome.com/search?ic=free",
+      },
+      iconify:{
+        icon:"https://icon-sets.iconify.design/favicon.ico",
+        link:"https://icon-sets.iconify.design",
       },
       Doubao:{
         icon:"https://img-s.msn.cn/tenant/amp/entityid/BB1qZI2R.img",
@@ -341,4 +347,4 @@ export default hopeTheme({
     //   },
     // },
   },
-},{custom: false});
+},{custom: true});

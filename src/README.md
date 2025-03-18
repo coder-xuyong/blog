@@ -6,7 +6,7 @@ title: 主页
 # heroImage: https://webstatic.mihoyo.com/upload/contentweb/2022/06/30/fdcbc9ef8859b7077d92ae38d925e15e_7767077963502328666.png
 heroText: coder-xuyong
 heroFullScreen: false # banner 是否全屏
-#bgImage: /assets/images/banner.jpg
+# bgImage: /assets/images/404.jpg
 bgImage: https://ys.mihoyo.com/main/_nuxt/img/poster.47f71d4.jpg
 tagline: 心有所向 日复一日 必有精进✨
 
@@ -22,20 +22,20 @@ projects:
   #   desc: 链接详细描述
   #   link: https://链接地址
 
-  # - icon: book
-  #   name: 书籍名称
-  #   desc: 书籍详细描述
-  #   link: https://你的书籍链接
+  - icon: book
+    name: 占位 书籍名称
+    desc: 书籍详细描述
+    link: https://你的书籍链接
 
-  # - icon: article
-  #   name: 无须服务器，搭建一个在线blog
-  #   desc: 使用 GitHub pages + vuepress 搭建静态blog
-  #   link: https://github.com/coder-xuyong/blog/README.md
+  - icon: article
+    name: 占位 未知
+    desc: 使用 GitHub pages + vuepress 搭建静态blog
+    link: https://github.com/coder-xuyong/blog/README.md
 
-  # - icon: friend
-  #   name: 伙伴名称
-  #   desc: 伙伴详细介绍
-  #   link: https://你的伙伴链接
+  - icon: friend
+    name: 占位 伙伴名称
+    desc: 伙伴详细介绍
+    link: https://你的伙伴链接
 
   # - icon: https://theme-hope-assets.vuejs.press/logo.svg
   #   name: 自定义项目
