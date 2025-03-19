@@ -2,6 +2,7 @@ import { defineClientConfig } from "vuepress/client";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { onMounted, watch } from "vue";
+import {changeBannerClient} from "./plugins/vuepress-plugin-hitokoto/common.js";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 // import "vuepress-theme-hope/presets/left-blog-info.scss";
 import "vuepress-theme-hope/presets/squircle-blogger-avatar.scss";
@@ -25,27 +26,9 @@ export default defineClientConfig({
     );
     setupSnowFall();
 
-    
     onMounted(() => {
-      // 获取目标容器
-      const blogMask = document.querySelector(".vp-blog-mask");
-      // 创建视频元素
-      const video = document.createElement("video");
-      video.id = "bg-video";
-      video.autoplay = true;
-      video.muted = true;
-      video.loop = true;
-      video.playsInline = true;
-      
-
-      // 设置视频源
-      const source = document.createElement("source");
-      source.src = "https://ys.mihoyo.com/main/_nuxt/videos/bg.3e78e80.mp4"; // 测试用视频
-      source.type = "video/mp4";
-      
-      // 插入元素
-      video.appendChild(source);
-      blogMask.appendChild(video);
+      changeBannerClient();
     });
+
   },
 });

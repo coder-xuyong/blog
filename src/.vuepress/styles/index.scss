@@ -21,15 +21,22 @@
       }
 }
 
+@font-face {
+    font-family: '华文行楷';
+    src: url('STXINGKA.TTF');
+}
+
 .hitokoto-text span {
-    font-family: STXingkai,Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: '华文行楷';
+    src: url('STXINGKA.TTF');
     // font-size: 2rem !important;
-    font-weight: bold;
+    // font-weight: bold;
     font-style: italic;
     // line-height: 1.5;
 }
 .hitokoto-author {
-    font-family: STXingkai,Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: '华文行楷';
+    src: url('STXINGKA.TTF');
     // font-size: 1.4rem !important;
 }
 

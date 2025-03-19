@@ -1,6 +1,7 @@
 import { onClickOutside, useStorage } from "@vueuse/core";
 import { Transition, computed, defineComponent, h, onMounted, ref, shallowRef, } from "vue";
 import { ClientOnly, usePageLang } from "vuepress/client";
+import {changeBannerClient} from "./../vuepress-plugin-hitokoto/common.js";
 import "./bing-hero-background.scss";
 const bingStorage = useStorage("bing-image", {
     index: 0,
@@ -43,30 +44,41 @@ export default defineComponent({
         onClickOutside(bingInfo, () => {
             showInfo.value = false;
         });
+        function isMobileDevice() {
+            // 用户代理字符串检测
+            const userAgent = navigator.userAgent.toLowerCase();
+            const mobileKeywords = [
+              "android",
+              "iphone",
+              "ipod",
+              "ipad",
+              "windows phone",
+              "blackberry",
+              "webos",
+              "opera mini",
+              "iemobile",
+              "mobile",
+            ];
+      
+            // 检查用户代理是否包含移动设备关键词
+            const isMobileUA = mobileKeywords.some((keyword) =>
+              userAgent.includes(keyword)
+            );
+      
+            // 检查屏幕尺寸和触摸支持
+            const isSmallScreen = window.innerWidth <= 768;
+            const isTouchScreen =
+              "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      
+            // 综合判断条件
+            return isMobileUA || (isSmallScreen && isTouchScreen);
+          }
         onMounted(() => {
             // void getImage().then((res) => {
             //     bingStorage.value.data = res;
             // });
-            
-             // 获取目标容器
-            const blogMask = document.querySelector(".vp-blog-mask");
-            // 创建视频元素
-            const video = document.createElement("video");
-            video.id = "bg-video";
-            video.autoplay = true;
-            video.muted = true;
-            video.loop = true;
-            video.playsInline = true;
-            
+            changeBannerClient();
 
-            // 设置视频源
-            const source = document.createElement("source");
-            source.src = "https://ys.mihoyo.com/main/_nuxt/videos/bg.3e78e80.mp4"; // 测试用视频
-            source.type = "video/mp4";
-            
-            // 插入元素
-            video.appendChild(source);
-            blogMask.appendChild(video);
     
         });
         return () => {
