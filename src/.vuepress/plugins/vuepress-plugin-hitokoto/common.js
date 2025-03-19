@@ -81,7 +81,7 @@ function changeBanner(){
         video2.appendChild(source2);
         blogPage.appendChild(video2)
     }else{
-        console.log("too")
+        console.log("too early")
     }
 
     
