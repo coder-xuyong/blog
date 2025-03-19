@@ -59,6 +59,13 @@ export default sidebar({
       collapsible: true,
       children: "structure",  
     },
+    {
+      text: "vuepress",
+      icon: "fa-brands fa-vuejs",
+      prefix: "posts/vuepress/",
+      collapsible: true,
+      children: "structure",  
+    },
     // {
     //   text: "文章",
     //   icon: "book",
