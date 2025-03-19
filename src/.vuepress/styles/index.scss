@@ -36,17 +36,39 @@
     }
 }
 
+.vp-page {  
+    background-color: white;
+    [data-theme="dark"] & {
+        background-color: #222 !important;
+      }
+}
+.vp-sidebar {
+    background-color: white;
+    [data-theme="dark"] & {
+        background-color: #222 !important;
+      }
+}
 
-// 覆盖代码块右上角语言标签的字体颜色
-// pre[class*="vp-page"]::before {
-//     color: #c21c1c !important; // 浅色模式下字体颜色
-//   }
-  
-//   // 深色模式适配
-//   html[data-theme="dark"] {
-//     pre[class*="vp-page"]::before {
-//       color: #3db42d !important; // 深色模式下字体颜色
-//       background-color: #260eb1 !important; // 深色模式背景色
-//     }
-//   }
-
+.hitokoto-text span {
+    font-family: STXingkai,Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2rem !important;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+    // position: relative;
+    // color: white; /* 设置初始文本颜色 */
+    // opacity: 1;
+    // overflow: hidden;
+    // background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red);
+    // background-size: 700% 100%;
+    // -webkit-background-clip: text;
+    // background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // animation: marquee 5s linear infinite;
+    // animation-delay:-5s;
+    // -webkit-animation-delay:-5s; /* Safari 和 Chrome */
+}
+.hitokoto-author {
+    font-family: STXingkai,Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.4rem !important;
+}
