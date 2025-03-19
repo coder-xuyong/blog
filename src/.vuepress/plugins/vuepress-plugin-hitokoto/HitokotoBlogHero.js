@@ -49,7 +49,7 @@ export default defineComponent({
                         else if (isMounted)
                             setTimeout(() => {
                                 void getHitokoto();
-                            }, 5 * 1000);
+                            }, 10 * 1000);
                     });
                 };
                 void renderNextWord();
