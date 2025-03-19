@@ -28,7 +28,7 @@ export default defineClientConfig({
     );
     
     setupSnowFall({
-      count: 20
+      count: 10
     });
 
     // const route = useRoute()
