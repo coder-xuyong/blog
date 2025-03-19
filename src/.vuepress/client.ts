@@ -26,7 +26,10 @@ export default defineClientConfig({
       },
       true
     );
-    setupSnowFall();
+    
+    setupSnowFall({
+      count: 20
+    });
 
     // const route = useRoute()
     // watchEffect(() => {
