@@ -44,35 +44,35 @@ export default defineComponent({
         onClickOutside(bingInfo, () => {
             showInfo.value = false;
         });
-        function isMobileDevice() {
-            // 用户代理字符串检测
-            const userAgent = navigator.userAgent.toLowerCase();
-            const mobileKeywords = [
-              "android",
-              "iphone",
-              "ipod",
-              "ipad",
-              "windows phone",
-              "blackberry",
-              "webos",
-              "opera mini",
-              "iemobile",
-              "mobile",
-            ];
+        // function isMobileDevice() {
+        //     // 用户代理字符串检测
+        //     const userAgent = navigator.userAgent.toLowerCase();
+        //     const mobileKeywords = [
+        //       "android",
+        //       "iphone",
+        //       "ipod",
+        //       "ipad",
+        //       "windows phone",
+        //       "blackberry",
+        //       "webos",
+        //       "opera mini",
+        //       "iemobile",
+        //       "mobile",
+        //     ];
       
-            // 检查用户代理是否包含移动设备关键词
-            const isMobileUA = mobileKeywords.some((keyword) =>
-              userAgent.includes(keyword)
-            );
+        //     // 检查用户代理是否包含移动设备关键词
+        //     const isMobileUA = mobileKeywords.some((keyword) =>
+        //       userAgent.includes(keyword)
+        //     );
       
-            // 检查屏幕尺寸和触摸支持
-            const isSmallScreen = window.innerWidth <= 768;
-            const isTouchScreen =
-              "ontouchstart" in window || navigator.maxTouchPoints > 0;
+        //     // 检查屏幕尺寸和触摸支持
+        //     const isSmallScreen = window.innerWidth <= 768;
+        //     const isTouchScreen =
+        //       "ontouchstart" in window || navigator.maxTouchPoints > 0;
       
-            // 综合判断条件
-            return isMobileUA || (isSmallScreen && isTouchScreen);
-          }
+        //     // 综合判断条件
+        //     return isMobileUA || (isSmallScreen && isTouchScreen);
+        //   }
         onMounted(() => {
             // void getImage().then((res) => {
             //     bingStorage.value.data = res;
