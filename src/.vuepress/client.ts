@@ -1,7 +1,9 @@
-import { defineClientConfig } from "vuepress/client";
+import { defineClientConfig, useRoute } from "vuepress/client";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
-import { onMounted, watch } from "vue";
+import { onMounted, onActivated,onDeactivated } from "vue";
+import { watchEffect } from 'vue'
+import { onBeforeMount } from 'vue'
 import {changeBannerClient} from "./plugins/vuepress-plugin-hitokoto/common.js";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 // import "vuepress-theme-hope/presets/left-blog-info.scss";
@@ -26,9 +28,43 @@ export default defineClientConfig({
     );
     setupSnowFall();
 
-    onMounted(() => {
-      changeBannerClient();
-    });
+    // const route = useRoute()
+    // watchEffect(() => {
+    //   // 每次路由变化时执行
+    //   // const currentPath = route.path
+    //   changeBannerClient();
+    // })
+    // onActivated(()=>{
+    //   console.log('替代 created 的逻辑')
+    // })
+    // onDeactivated(()=>{
+    //   console.log('替代 created 的逻辑')
+    // })
+    // onBeforeMount(() => {
+    //   console.log('替代 created 的逻辑')
+    // })
+    // onMounted(() => {
+    //   changeBannerClient();
+    // });
 
   },
+  enhance({ router }) {
+    // router.beforeEach((to) => {
+    //   changeBannerClient();
+    //   console.log('before navigation')
+    // })
+
+    router.afterEach((to) => {
+      setTimeout(() => {
+        changeBannerClient();  
+      }, 1);
+      // console.log('after navigation')
+    })
+  },
+  // async enhance() {
+  //   if (!__VUEPRESS_SSR__) {
+  //     const nonSsrFriendlyModule = await import('non-ssr-friendly-module')
+  //     // ...
+  //   }
+  // },
 });
