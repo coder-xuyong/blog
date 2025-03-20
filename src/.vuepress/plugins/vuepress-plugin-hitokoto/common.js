@@ -37,20 +37,19 @@ function isMobileDevice() {
 }
 
 function changeBanner() {
+    
   // 使用条件判断包裹 DOM 操作
   if (typeof document !== 'undefined') {
     // 使用示例
     if (isMobileDevice()) {
-      console.log("当前设备是手机或平板");
+    //   console.log("当前设备是手机或平板");
 
       // 使用类型断言强制指定类型（跳过空值检查）
       document.querySelector(".vp-blog-hero.fullscreen").style.cssText = ` height:auto;`;
       document.querySelector(".hitokoto-text").style.cssText = `height:3rem;`;
       document.querySelector(".hitokoto-text>span").style.cssText = ` font-size:1.8rem;`;
     } else {
-      console.log("当前设备是电脑");
-
-
+    //   console.log("当前设备是电脑");
       const hitokoto = document.querySelector(".hitokoto-text>span")
       if (hitokoto) {
         hitokoto.style.cssText = ` font-size:2rem;`;
@@ -58,6 +57,10 @@ function changeBanner() {
       // 获取目标容器
       const blogMask = document.querySelector(".vp-blog-mask");
       if (blogMask) {
+        const isVideo = document.querySelector("#bg-video");
+        if(isVideo){
+            return;
+        }
         // 创建视频元素
         const video = document.createElement("video");
         video.id = "bg-video";
@@ -77,8 +80,13 @@ function changeBanner() {
       }
 
       const blogPage = document.querySelector("#main-content");
-
       if (blogPage) {
+        // console.log(blogPage)
+        const isVideo = document.querySelector("#bg-video2");
+        // console.log(isVideo)
+        if(isVideo){
+            return;
+        }
         const video2 = document.createElement("video");
         video2.id = "bg-video2";
         video2.autoplay = true;
@@ -93,12 +101,15 @@ function changeBanner() {
 
         video2.appendChild(source2);
         blogPage.appendChild(video2)
+        
       } else {
         console.log("too early")
       }
     }
 
 
+  }else{
+    console.log("document is undefined")
   }
 }
 

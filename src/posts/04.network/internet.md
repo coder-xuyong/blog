@@ -370,4 +370,4 @@ IP数据报：`HTTP+TCP+IP`;
 
 
 
-​	![alt text](./../../../src/.vuepress/public/assets/images/blogs/Internet1.png)
+​	![alt text](img/Internet1.png)

@@ -3,7 +3,7 @@ import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunnin
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { onMounted, onActivated,onDeactivated } from "vue";
 import { watchEffect } from 'vue'
-import { onBeforeMount } from 'vue'
+import { nextTick } from 'vue'
 import {changeBannerClient} from "./plugins/vuepress-plugin-hitokoto/common.js";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 // import "vuepress-theme-hope/presets/left-blog-info.scss";
@@ -31,43 +31,31 @@ export default defineClientConfig({
       count: 10
     });
 
-    // const route = useRoute()
-    // watchEffect(() => {
-    //   // 每次路由变化时执行
-    //   // const currentPath = route.path
-    //   changeBannerClient();
-    // })
-    // onActivated(()=>{
-    //   console.log('替代 created 的逻辑')
-    // })
-    // onDeactivated(()=>{
-    //   console.log('替代 created 的逻辑')
-    // })
-    // onBeforeMount(() => {
-    //   console.log('替代 created 的逻辑')
-    // })
     // onMounted(() => {
     //   changeBannerClient();
     // });
-
+      // return () =>changeBannerClient();
   },
+  
   enhance({ router }) {
-    // router.beforeEach((to) => {
-    //   changeBannerClient();
-    //   console.log('before navigation')
-    // })
+    router.afterEach(() => {
 
-    router.afterEach((to) => {
-      setTimeout(() => {
+      let count = 0;
+      const intervalId = setInterval(() => {
+        // 执行你的任务
+        // console.log(`执行第 ${count + 1} 次`, Date.now());
         changeBannerClient();  
-      }, 1);
-      // console.log('after navigation')
+        count++;
+        
+        if (count >= 10) {
+          clearInterval(intervalId);
+          // console.log('任务完成');
+        }
+      }, 100);
+    //   setTimeout(() => {
+    //     changeBannerClient();  
+    //   }, 1000);
     })
   },
-  // async enhance() {
-  //   if (!__VUEPRESS_SSR__) {
-  //     const nonSsrFriendlyModule = await import('non-ssr-friendly-module')
-  //     // ...
-  //   }
-  // },
+
 });
