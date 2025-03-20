@@ -32,9 +32,9 @@ index: false
 - [Java 泛型](01.基础特性/09.Java泛型.md)
 - [Java 反射](01.基础特性/10.Java反射.md)
 - [Java 注解](01.基础特性/11.Java注解.md)
-- [Java 常用工具类](01.基础特性/12.Java常用工具类)
-- [Java String 类型](01.基础特性/13.JavaString类型.md)
-
+- [Java String 类型](01.基础特性/12.JavaString类型.md)
+- [Java java日志](01.基础特性/13.java日志.md)
+- [Java 常用工具类](01.基础特性/14.Java常用工具类.md)
 
 ### [Java 高级特性](02.高级特性)
 

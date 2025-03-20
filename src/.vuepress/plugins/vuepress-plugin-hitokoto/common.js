@@ -52,7 +52,7 @@ function changeBanner() {
     //   console.log("当前设备是电脑");
       const hitokoto = document.querySelector(".hitokoto-text>span")
       if (hitokoto) {
-        hitokoto.style.cssText = ` font-size:2rem;`;
+        hitokoto.style.cssText = ` font-size:2.6rem;`;
       }
       // 获取目标容器
       const blogMask = document.querySelector(".vp-blog-mask");
