@@ -47,7 +47,7 @@ function changeBanner() {
       // 使用类型断言强制指定类型（跳过空值检查）
       document.querySelector(".vp-blog-hero.fullscreen").style.cssText = ` height:auto;`;
       document.querySelector(".hitokoto-text").style.cssText = `height:3rem;`;
-      document.querySelector(".hitokoto-text>span").style.cssText = ` font-size:1.8rem;`;
+      document.querySelector(".hitokoto-text>span").style.cssText = ` font-size:1.4rem;`;
     } else {
     //   console.log("当前设备是电脑");
       const hitokoto = document.querySelector(".hitokoto-text>span")
