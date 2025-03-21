@@ -7,7 +7,9 @@
     line-height: 1.5;
 }
 
-
+.vp-blog-home{
+    background-color: inherit;
+}
 .vp-page {  
     z-index: 0;
     background-color: rgba(243, 246, 247, 1);
@@ -33,6 +35,13 @@
     }
     .vp-project-panel{
         background-color: rgba(243, 246, 247, 0);
+        .article-icon {
+            // background-color:currentColor;
+        }
+    }
+    .vp-article-list{
+        transform: none !important;
+        //  background-color: rgba(243, 246, 247, 0);
     }
     // .has-toc > .vp-toc-placeholder {
     //     margin-top: -1.5%;
