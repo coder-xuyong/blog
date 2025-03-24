@@ -65,25 +65,22 @@
         background-color: #222 !important;
       }
 }
+// 太占用网络了，使用默认字体
+// @font-face {
+//     font-family: '华文行楷';
+//     src: url('STXINGKA.TTF');
+// }
 
-@font-face {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
-}
 
-.hitokoto-text span {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
-    // font-size: 2rem !important;
-    // font-weight: bold;
-    font-style: italic;
-    // line-height: 1.5;
-}
-.hitokoto-author {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
-    // font-size: 1.4rem !important;
-}
+// .hitokoto-text span {
+//     font-family: '华文行楷';
+//     src: url('STXINGKA.TTF');
+//     font-style: italic;
+// }
+// .hitokoto-author {
+//     font-family: '华文行楷';
+//     src: url('STXINGKA.TTF');
+// }
 
 
 // .vp-blog-mask {
