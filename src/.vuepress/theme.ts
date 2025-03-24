@@ -10,7 +10,7 @@ export default hopeTheme({
   },
 
   // 修改 icon 来源
-  // iconAssets: "fontawesome-with-brands",
+  iconAssets: "fontawesome-with-brands",
   // iconAssets: "iconify",
 
   logo: "/logo.svg",
@@ -228,10 +228,10 @@ export default hopeTheme({
 
     // 启用搜索框插件
     // search:true,
-    // search: {
-    //   // 插件选项
-    //     isSearchable: (page) => page.path !== '/',
-    // },
+    search: {
+      // 插件选项
+        isSearchable: (page) => page.path !== '/',
+    },
     slimsearch: false,
     // slimsearch:{
     //   hotReload: true,
