@@ -17,8 +17,10 @@ tag:
 sticky: false
 star: true
 ---
-基础的 AI 知识，作为了解使用
-<!-- more -->
+
+# AI 入门
+
+>  基础的 AI 知识，作为了解使用
 
 ## 了解 AI 领域的树形结构
 ```shell

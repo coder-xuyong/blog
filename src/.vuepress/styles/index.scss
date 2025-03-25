@@ -1,5 +1,5 @@
 // place your custom styles here
-.vp-blog-hero-title{
+.vp-blog-hero-title {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -13,15 +13,17 @@
 // .vp-blog-main {
 //     background-color: initial;
 // }
-.vp-page {  
+.vp-page {
     z-index: 0;
+
     // background-color: rgba(243, 246, 247, 1);
     // opacity: 0.9;
     [data-theme="dark"] & {
         z-index: inherit;
         background-color: rgba(34, 34, 34, 1) !important;
         // background-color: #222 !important;
-      }
+    }
+
     // *{
     //     background-color: inherit;
     //     // opacity: inherit;
@@ -46,42 +48,64 @@
     .vp-page-title,
     .theme-hope-content,
     .vp-page-meta,
-    .vp-page-nav{
+    .vp-page-nav {
         background-color: rgba(243, 246, 247, 1);
+
         [data-theme="dark"] & {
             background-color: rgba(34, 34, 34, 1) !important;
-          }
+        }
     }
-    .theme-hope-content > blockquote {
+//去除文章页面最上面的空缝隙
+    .theme-hope-content {
+        margin-top: -1.1rem;
+        // blockquote {
         // margin: -0.8rem 0 0 1rem;
-        margin-top: -0.8rem ;
+        // margin-top: -0.8rem ;
+        // }
     }
+
     // .vp-toc-placeholder > #toc > div.vp-toc-wrapper > ul > li:nth-child(1) > a{
     //     color: rgb(20 20 20) !important;
     //     font-weight: 600;
     // }
-    .vp-toc-placeholder > #toc > div.vp-toc-wrapper {
+    .vp-toc-placeholder>#toc>div.vp-toc-wrapper {
         border-radius: 2%;
-    // } ul{
+        // } ul{
         background-color: rgba(243, 246, 247, 0.18);
+
         // font-weight: 600 !important;
         [data-theme="dark"] & {
             background-color: rgb(34, 34, 34);
         }
     }
+
     // .vp-article-list{
     //     transform: none !important;
     // }
+}
+
+//主页去除最下面多余的容器
+[vp-content]:not(.custom) {
+    // max-width: var(--content-width, 740px);
+    // margin: 0 auto;
+    padding: 0rem 2.5rem;
+    // margin-bottom: -1.1rem;
+}
+//文章content里面的页脚 和 内容的空隙补全。
+.vp-page-meta {
+    margin-top: -1rem;
 }
 
 .vp-sidebar {
     z-index: 1;
     backdrop-filter: none;
     background-color: rgba(243, 246, 247, 0);
+
     [data-theme="dark"] & {
         background-color: #222 !important;
-      }
+    }
 }
+
 // 太占用网络了，使用默认字体
 @font-face {
     font-family: '华文行楷';
@@ -94,6 +118,7 @@
     src: url('STXINGKA.TTF');
     font-style: italic;
 }
+
 .hitokoto-author {
     font-family: '华文行楷';
     src: url('STXINGKA.TTF');
@@ -117,7 +142,8 @@
     // object-fit: cover;
     overflow: hidden;
 }
-#bg-video2{
+
+#bg-video2 {
     position: fixed;
     left: 50%;
     top: 50%;
