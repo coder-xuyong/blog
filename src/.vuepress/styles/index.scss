@@ -52,6 +52,23 @@
             background-color: rgba(34, 34, 34, 1) !important;
           }
     }
+    .theme-hope-content > blockquote {
+        // margin: -0.8rem 0 0 1rem;
+        margin-top: -0.8rem ;
+    }
+    // .vp-toc-placeholder > #toc > div.vp-toc-wrapper > ul > li:nth-child(1) > a{
+    //     color: rgb(20 20 20) !important;
+    //     font-weight: 600;
+    // }
+    .vp-toc-placeholder > #toc > div.vp-toc-wrapper {
+        border-radius: 2%;
+    // } ul{
+        background-color: rgba(243, 246, 247, 0.18);
+        // font-weight: 600 !important;
+        [data-theme="dark"] & {
+            background-color: rgb(34, 34, 34);
+        }
+    }
     // .vp-article-list{
     //     transform: none !important;
     // }
