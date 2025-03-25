@@ -5,12 +5,20 @@ $vp-c-bg: (
 );
 
 // .blog-page-wrapper{
-// .vp-footer-wrapper {
-//     height: auto;
-//     background-image: url("./../public/assets/images/footer.webp");
-//     background-repeat: no-repeat;
-//     background-position: center;
-// }
+.vp-footer-wrapper {
+    height: auto;
+    background-image: url("/assets/images/footer.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25cqmax;
+    
+    background-color: rgba(243, 246, 247, 0.75);;
+}
+@media (max-width: 719px) {
+    .vp-footer-wrapper {
+        background-size: cover;
+    }
+}
 
 // .vp-page {
 //     background-color:(
