@@ -75,7 +75,11 @@ export default hopeTheme({
       },
       Yuanshen:{
         icon:"https://ys.mihoyo.com/main/favicon.ico",
-        link: "https://ys.mihoyo.com/main/",
+        link: "https://ys.mihoyo.com/",
+      },
+      StarRail:{
+        icon:"https://sr.mihoyo.com/favicon-mi.ico",
+        link: "https://sr.mihoyo.com/",
       },
       fontawesome:{
         icon: "https://fontawesome.com/favicon.ico",
