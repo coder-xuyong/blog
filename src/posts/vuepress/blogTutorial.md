@@ -21,9 +21,9 @@ sticky: true
 star: true
 ---
 
-记录**从零开始**，使用 vuepress 搭建博客部署到 GitHub pages 的过程
+# blog搭建教程
 
-<!-- more -->
+> 记录**从零开始**，使用 vuepress 搭建博客部署到 GitHub pages 的过程
 
 ## 安装 vs code
 

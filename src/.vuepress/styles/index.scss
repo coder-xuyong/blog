@@ -7,13 +7,7 @@
     line-height: 1.5;
 }
 
-// .vp-blog-home{
-//     background-color: inherit;
-// }
-// .vp-blog-main {
-//     background-color: initial;
-// }
-.vp-page {
+.vp-page {  
     z-index: 0;
 
     // background-color: rgba(243, 246, 247, 1);
@@ -22,27 +16,7 @@
         z-index: inherit;
         background-color: rgba(34, 34, 34, 1) !important;
         // background-color: #222 !important;
-    }
-
-    // *{
-    //     background-color: inherit;
-    //     // opacity: inherit;
-    // }
-    // .vp-blog-hero-title{
-    //     background-color: rgba(243, 246, 247, 0);
-    // }
-    // .hitokoto{
-    //     background-color: rgba(243, 246, 247, 0);
-    // }
-    // .page-cover{
-    //     background-color: rgba(243, 246, 247, 0);
-    // }
-    // .vp-page-title {
-    //     margin-bottom: -1.9%;
-    // }
-    // .vp-project-panel{
-    //     background-color: rgba(243, 246, 247, 0);
-    // }
+      }
 
     .vp-breadcrumb,
     .vp-page-title,
@@ -78,10 +52,10 @@
             background-color: rgb(34, 34, 34);
         }
     }
-
-    // .vp-article-list{
-    //     transform: none !important;
-    // }
+    //文章封面
+    .page-cover {
+        margin-bottom: -0.2rem;
+    }
 }
 
 //主页去除最下面多余的容器
