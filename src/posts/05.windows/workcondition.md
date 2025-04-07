@@ -70,6 +70,13 @@ start /b ./jdk1.8.0_351/jre/bin/javaw -jar %JAR_NAME%
 echo %JAR_NAME% started.
 exit /b 0
 ```
+案例三：
+```shell
+java -jar D:\transferData\datatransport-0.0.1-SNAPSHOT.jar \
+  --spring.config.location=D:\transferData\application.properties \
+  > D:\transferData\console.log 2>&1
+PAUSE
+```
 ## windows 停止 jar包
 1.根据端口号停止服务
 ```shell
