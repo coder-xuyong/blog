@@ -85,9 +85,13 @@ export default hopeTheme({
         icon: "https://fontawesome.com/favicon.ico",
         link:"https://fontawesome.com/search?ic=free",
       },
-      iconify:{
-        icon:"https://icon-sets.iconify.design/favicon.ico",
-        link:"https://icon-sets.iconify.design",
+      // iconify:{
+      //   icon:"https://icon-sets.iconify.design/favicon.ico",
+      //   link:"https://icon-sets.iconify.design",
+      // },
+      yuque:{
+        icon : "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*vMxOQIh4KBMAAAAAAAAAAAAADvuFAQ/original",
+        link: "https://www.yuque.com/"
       },
       Doubao:{
         icon:"https://img-s.msn.cn/tenant/amp/entityid/BB1qZI2R.img",
