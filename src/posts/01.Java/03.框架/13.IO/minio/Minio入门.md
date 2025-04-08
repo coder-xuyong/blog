@@ -1,0 +1,127 @@
+---
+title: minio 入门
+date: 2025-04-07
+lastUpdated: true
+isOrigin: true
+author: 
+    - name: xuyong
+      url: https://github.com/coder-xuyong
+    - name: 悟空
+      url: https://www.yuque.com/wukong-zorrm
+category:
+  - minio
+
+tag:
+  - io
+
+order: 1
+star: true
+permalinkPattern: :year/:month/:day/:slug.html
+---
+
+## 介绍
+MinIO 是一种高性能、S3 兼容的对象存储。
+它专为大规模 AI/ML、数据湖和数据库工作负载而构建，并且它是由软件定义的存储。
+不需要购买任何专有硬件，就可以在云上和普通硬件上拥有分布式对象存储。
+MinIO拥有开源 GNU AGPL v3 和商业企业许可证的双重许可。
+
+## 使用场景
+
+适用于存储图片、视频、日志、备份等非结构化数据。
+
+## mysql vs minio 空间占用对比
+查询mysql 所有库的 容量大小
+```shell
+SELECT 
+table_schema as '数据库',
+sum(table_rows) as '记录数',
+sum(truncate(data_length/1024/1024, 2)) as '数据容量(MB)',
+sum(truncate(index_length/1024/1024, 2)) as '索引容量(MB)',
+sum(truncate(DATA_FREE/1024/1024, 2)) as '碎片占用(MB)'
+from information_schema.tables
+group by table_schema
+order by sum(data_length) desc, sum(index_length) desc;
+```
+
+通过执行此SQL，可以明显看出mysql索引占用了一部分容量，这部分使用minio是不会有的。mysql除了索引还有其他空间占用，此处不过多讨论。
+
+## 官方网站
+中文官网：https://www.minio.org.cn/
+英文官网：https://min.io/
+官方演示服务器：https://play.minio.org.cn
+
+- 用户名: minioadmin
+- 密码: minioadmin
+
+## 下载安装
+windows 下载地址：https://dl.minio.org.cn/server/minio/release/windows-amd64/minio.exe
+
+## 基本使用
+### 启动服务
+找到minio.exe 所在的路径，启用 cmd 输入： `.\minio.exe server D:\minio --console-address :9090`
+其中 `D:\minio` 为上传文件所在路径
+根据控制台信息，启动服务。如：http://127.0.0.1:9090
+默认账号：minioadmin，默认秘密：minioadmin
+
+### 创建 Bucket
+第一次登陆，可在页面主页看到  `Create a Bucket`,点击后输入 Bucket 的名字，如 test，点击`Create Bucket`。
+
+创建之后，即可在页面中看到该 Bucket 的详细信息，同时也能在D:\minio 下看见一个 test 的文件夹。
+
+### 上传和下载文件
+
+在 Object Browser 界面，点击 Bucket 进入详情界面，点击 upload 上传文件。
+成功之后，选中文件即可下载。
+
+## 存储方式
+常见的存储方式有三种：文件存储、块存储、对象存储，minio 采用的是对象存储
+### 文件存储
+![文件存储](https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_float/private/fileStorage_orange_320x242_0.png.webp?itok=CsTgvvas)
+最常见的存储方式，比如电脑的硬盘，以文件或文件夹的方式存储，通过文件路径访问
+
+### 块存储
+![块存储](https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_float/private/blockStorage_orange_320x242_0.png.webp?itok=x5wAjDRu)
+块存储会将数据拆分成块，并单独存储各个块。每个数据块都有一个唯一标识符。当用户请求数据时，底层存储软件会将数据块重新组装成文件返回给用户。它通常会部署在存储区域网络（SAN）环境中，常见的如RAID和LVM技术
+### 对象存储
+![对象存储](https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_float/private/objectStorage_orange_360x198_0.png.webp?itok=ef-RHqzs)
+类似于网盘，将文件存储在云端或者服务端。本质上是键值（Key-Value）存储，每个对象有唯一标识符，以及描述数据的元数据。元数据包括创建时间、失效时间、访问控制等信息。常见的有亚马逊S3，阿里云OSS
+
+
+##  纠删码
+MinIO 通过纠删码实现数据冗余，纠删码相比于多副本，可以提高磁盘的空间利用率。
+
+### 纠删码与副本比较
+假设有一个100M的文件，存储到3个磁盘中，实现任意一个磁盘损坏不丢失数据。
+- 副本方式
+将100M文件分割成part1，part2两个50M大小的文件，每个文件保存2份。实际占用200M的存储空间
+![副本存储](img/111.png)
+- 纠删码方式
+将100M文件分割成part1，part2两个50M大小的文件，通过纠删码算法对part1和part2两个进行计算，生成一个50M的校验块，当part1、part2任意一个损坏时，可以通过校验块逆向恢复文件。实际占用150M的存储空间。
+![纠删码存储](img/222.png)
+
+### 纠删码数据恢复原理
+纠删码（Erasure Codes）能够总体上分为XOR 码和RS 码两类，XOR 码编、解码只需要按位异或（bit-wise exclusive-OR）即可完成，速度较快；MinIO使用Reed-Solomon码生成数据校验块，具有更好磁盘利用率，但是需要更多的计算开销。
+由于，XOR 码编比较简单，便于理解，我们以XOR 码编为例讲解数据恢复原理。
+XOR即异或运算，用符号 ^ 表示，是一种二进制位运算符号。**两个值相同，异或运算结果为0，两个值不同，结果为1**。
+- 编码 ( A ^ B = C )
+![](img/333.png)
+- 解码恢复数据 ( C ^ B = A )
+![](img/444.png)
+
+### Reed-Solomon码（RS码）
+MinIO使用Reed-Solomon码生成数据校验块。
+![](img/555.png)
+Reed-Solomon码可以根据M个数据块，生成N个校验块, 其中 N <= M 。
+从 M + N 中取出任意 M 个块就能解码出原始数据。即RS码最多容忍N个块同时丢失。
+因此，RS码可以获得更好的磁盘利用率，但是需要更多的计算开销。
+
+举例：假设一共有7块磁盘，允许任意2块硬盘损坏而不丢失数据。100mb大小的文件应如何存储？实际占用多少存储空间？
+
+答案：M + N = 7      N = 2     M = 7 -2 = 5
+           因此，将100mb的文件分割成5份20mb的数据块，利用RS码生成2个20mb的校验块。将数据块和校验块分别存储到不同的硬盘上。
+           实际占用 （ 5 * 20 ）+（ 2 * 20 ）= 140M。
+  ![](img/666.png)
+
+
+## 参考
+> https://www.yuque.com/wukong-zorrm/os3zhw/mdevk5
