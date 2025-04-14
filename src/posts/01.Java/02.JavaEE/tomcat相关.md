@@ -46,3 +46,10 @@ export JRE_HOME=/home/jdk/Java/jdk7/jre7
 - 注意：修改 `setclasspath.bat` 或 `setclasspath.sh` 文件后，Tomcat 启动时会调用这些文件来获取 JAVA_HOME 和 JRE_HOME 环境变量的值，从而使用指定的 JDK
 
 - 替代方法：可以直接修改 `catalina.bat` 或 `catalina.sh` 文件，增加相同的环境变量设置
+
+## 将 tomcat 注册为 service 
+进入D:\apache-tomcat-8.5.100\bin目录，在bin目录下键入“cmd”,按下回车打开cmd窗口
+
+在cmd窗口中键入“service.bat install Tomcat8”,按下回车。出现 the service ‘tocmat8’ has been installed 即成功。
+
+最后去服务里面找到tomcat8 将其设置为自动启动。
