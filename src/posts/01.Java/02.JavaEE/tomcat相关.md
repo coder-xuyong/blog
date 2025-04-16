@@ -53,3 +53,16 @@ export JRE_HOME=/home/jdk/Java/jdk7/jre7
 在cmd窗口中键入“service.bat install Tomcat8”,按下回车。出现 the service ‘tocmat8’ has been installed 即成功。
 
 最后去服务里面找到tomcat8 将其设置为自动启动。
+
+## 可能遇到的问题
+
+### Found 'D:\apache-tomcat-8.5.100\jdk\jre\bin\server\jvm.dll' but couldn't load it.
+tomcat 指定 jdk启动后，日志报错 `Found 'D:\apache-tomcat-8.5.100\jdk\jre\bin\server\jvm.dll' but couldn't load it.`
+在jdk\bin 里面启动cmd，执行 `java` 命令，出现如下错误
+```shell
+D:widkwbin >java
+Error:loading: D:\jdk\jre\bin\cruntime140.dll
+Error:loading: D:\jdk\jre\bin\server\jvm.d11
+```
+
+结论：缺少 vc库 ，百度下载一个安装即可。如：https://www.xitongzhijia.net/tags/%E5%BE%AE%E8%BD%AF%E5%AE%98%E6%96%B9VC%E8%BF%90%E8%A1%8C%E5%BA%93
