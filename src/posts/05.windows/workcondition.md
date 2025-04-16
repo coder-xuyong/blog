@@ -209,3 +209,12 @@ endlocal
 pause
 ```
 
+## windows 安装sftp 和 ftp 服务
+
+可兼容2008 windows 服务器
+下载软件：https://download.cnet.com/download/freesshd/3000-2085_4-75937656.html
+
+配置参考文档：https://blog.csdn.net/qinhuaifeng/article/details/134422259
+
+
+**注意启动后没有UI界面，会自动缩小到任务栏。**
