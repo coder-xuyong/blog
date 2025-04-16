@@ -81,6 +81,10 @@ export default hopeTheme({
         icon:"https://sr.mihoyo.com/favicon-mi.ico",
         link: "https://sr.mihoyo.com/",
       },
+      Mingchao:{
+        icon: "https://mc.kurogames.com/static4.0/favicon.ico",
+        link: "https://mc.kurogames.com/main#resonators",
+      },
       fontawesome:{
         icon: "https://fontawesome.com/favicon.ico",
         link:"https://fontawesome.com/search?ic=free",

@@ -1,6 +1,7 @@
 ---
-title: jsch 入门
+title: 从零到一的 sftp 和 ftp 发送文件
 date: 2025-04-16
+cover: https://webstatic.mihoyo.com/upload/contentweb/2022/07/04/1ae0d0aaad9ee9b55652ea7ec67f0465_624394286022075834.png
 lastUpdated: true
 isOrigin: true
 author: 
