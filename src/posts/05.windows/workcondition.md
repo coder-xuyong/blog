@@ -29,6 +29,8 @@ netstat -aon|findstr "9011"
 tasklist|findstr "24548"
 # 通过程序id，杀死这个程序
 taskkill -pid 24548 -f
+# 查找这个端口的线程的数量
+netstat -ano | findstr 9002 | find /c /v ""
 ```
 
 ## windows 启动 jar包
