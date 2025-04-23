@@ -22,5 +22,4 @@ npm run docs:dev
 
 
 ## 详细部署教程
-
-查看：https://coder-xuyong.github.io/blog/posts/vuepress/blogTutorial.html
+查看：https://coder-xuyong.github.io/blog 的置顶文章
