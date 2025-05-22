@@ -405,7 +405,11 @@ mvn dependency:copy -Dartifact=org.docx4j:docx4j:6.1.2 -DoutputDirectory=<output
 
 ## maven 相关的bug
 ### Could not transfer artifact
-去下载的库里面吧`lastUpdated`结尾的文件删除重新下载
+1.去下载的库里面吧`lastUpdated`结尾的文件删除重新下载
+2.第一条执行后不行，才执行这一条。idea设置里面找到maven菜单下的 importing，在 VM options for importer 添加： `-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true`
+
+参考：
+> https://blog.csdn.net/weixin_44005516/article/details/108293228
 
 ### the trustAnchors parameter must be non-empty
 更换jdk，或者卸载jdk
