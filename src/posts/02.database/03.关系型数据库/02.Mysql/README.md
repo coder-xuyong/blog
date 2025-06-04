@@ -1,6 +1,6 @@
 ---
 icon: logos:mysql
-title: Mysql 教程
+title: Mysql
 date: 2020-02-10 14:27:39
 categories:
   - 数据库
