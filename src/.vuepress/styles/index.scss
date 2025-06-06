@@ -1,103 +1,115 @@
 // place your custom styles here
 .vp-blog-hero-title {
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-style: italic;
-    line-height: 1.5;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5;
 }
 
-.vp-page {  
-    z-index: 0;
+//文章左边菜单栏
+#sidebar > .vp-sidebar-links {
+  border-radius: 2%;
+  background-color: rgba(243, 246, 247, 0.3) !important;
 
-    // background-color: rgba(243, 246, 247, 1);
-    // opacity: 0.9;
+  // font-weight: 600 !important;
+  [data-theme="dark"] & {
+    background-color: rgb(34, 34, 34);
+  }
+}
+.vp-page {
+  z-index: 0;
+
+  // background-color: rgba(243, 246, 247, 1);
+  // opacity: 0.9;
+  [data-theme="dark"] & {
+    z-index: inherit;
+    background-color: rgba(34, 34, 34, 1) !important;
+    // background-color: #222 !important;
+  }
+
+  .vp-breadcrumb,
+  .vp-page-title,
+  .theme-hope-content,
+  .vp-page-meta,
+  .vp-page-nav {
+    background-color: rgba(243, 246, 247, 1);
+
     [data-theme="dark"] & {
-        z-index: inherit;
-        background-color: rgba(34, 34, 34, 1) !important;
-        // background-color: #222 !important;
-      }
-
-    .vp-breadcrumb,
-    .vp-page-title,
-    .theme-hope-content,
-    .vp-page-meta,
-    .vp-page-nav {
-        background-color: rgba(243, 246, 247, 1);
-
-        [data-theme="dark"] & {
-            background-color: rgba(34, 34, 34, 1) !important;
-        }
+      background-color: rgba(34, 34, 34, 1) !important;
     }
-//去除文章页面最上面的空缝隙
-    .theme-hope-content {
-        margin-top: -1.1rem;
-        // blockquote {
-        // margin: -0.8rem 0 0 1rem;
-        // margin-top: -0.8rem ;
-        // }
-    }
-
-    // .vp-toc-placeholder > #toc > div.vp-toc-wrapper > ul > li:nth-child(1) > a{
-    //     color: rgb(20 20 20) !important;
-    //     font-weight: 600;
+  }
+  //去除文章页面最上面的空缝隙
+  .theme-hope-content {
+    margin-top: -1.1rem;
+    // blockquote {
+    // margin: -0.8rem 0 0 1rem;
+    // margin-top: -0.8rem ;
     // }
-    .vp-toc-placeholder>#toc>div.vp-toc-wrapper {
-        border-radius: 2%;
-        // } ul{
-        background-color: rgba(243, 246, 247, 0.18);
+  }
 
-        // font-weight: 600 !important;
-        [data-theme="dark"] & {
-            background-color: rgb(34, 34, 34);
-        }
+  // .vp-toc-placeholder > #toc > div.vp-toc-wrapper > ul > li:nth-child(1) > a{
+  //     color: rgb(20 20 20) !important;
+  //     font-weight: 600;
+  // }
+
+  
+  //文章右边目录
+  .vp-toc-placeholder > #toc {
+    border-radius: 2%;
+    // } ul{
+    background-color: rgba(243, 246, 247, 0.3);
+
+    // font-weight: 600 !important;
+    [data-theme="dark"] & {
+      background-color: rgb(34, 34, 34);
     }
-    //文章封面
-    .page-cover {
-        margin-bottom: -0.2rem;
-    }
+  }
+
+  //文章封面
+  .page-cover {
+    margin-bottom: -0.2rem;
+  }
 }
 
 //主页去除最下面多余的容器
 [vp-content]:not(.custom) {
-    // max-width: var(--content-width, 740px);
-    // margin: 0 auto;
-    padding: 0rem 2.5rem;
-    // margin-bottom: -1.1rem;
+  // max-width: var(--content-width, 740px);
+  // margin: 0 auto;
+  padding: 0rem 2.5rem;
+  // margin-bottom: -1.1rem;
 }
 //文章content里面的页脚 和 内容的空隙补全。
 .vp-page-meta {
-    margin-top: -1.5rem;
+  margin-top: -1.5rem;
 }
 
 .vp-sidebar {
-    z-index: 1;
-    backdrop-filter: none;
-    background-color: rgba(243, 246, 247, 0);
+  z-index: 1;
+  backdrop-filter: none;
+  background-color: rgba(243, 246, 247, 0);
 
-    [data-theme="dark"] & {
-        background-color: #222 !important;
-    }
+  [data-theme="dark"] & {
+    background-color: #222 !important;
+  }
 }
 
 // 太占用网络了，使用默认字体
 @font-face {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
+  font-family: "华文行楷";
+  src: url("STXINGKA.TTF");
 }
 
-
 .hitokoto-text span {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
-    font-style: italic;
+  font-family: "华文行楷";
+  src: url("STXINGKA.TTF");
+  font-style: italic;
 }
 
 .hitokoto-author {
-    font-family: '华文行楷';
-    src: url('STXINGKA.TTF');
+  font-family: "华文行楷";
+  src: url("STXINGKA.TTF");
 }
-
 
 // .vp-blog-mask {
 //     width: 100vw;
@@ -107,30 +119,27 @@
 // }
 
 #bg-video {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    // object-fit: cover;
-    overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  // object-fit: cover;
+  overflow: hidden;
 }
 
 #bg-video2 {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    // object-fit: cover;
-    overflow: hidden;
-    z-index: -1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  // object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
 }
-
-
-
 
 // .vp-blog-hero-description {
 //     font-family: 'Times New Roman', Times, serif;
