@@ -31,6 +31,13 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+     {
+      text: "designPattern",
+      icon: "fa-solid fa-square-binary",
+      prefix: "posts/03.designPattern/",
+      collapsible: true,
+      children: "structure",
+    },
     {
       text: "linux",
       icon: "fa-brands fa-linux",
