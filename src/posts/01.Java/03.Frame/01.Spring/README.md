@@ -1,6 +1,9 @@
 ---
 title: 1.spring-tutorial
 date: 2022-06-14 09:37:30
+author: 
+    - name: 钝悟
+      url: https://dunwu.github.io/
 categories:
   - Java
   - 框架
@@ -10,7 +13,7 @@ tags:
   - 框架
   - Spring
   - SpringBoot
-permalink: /pages/a1a3d3/
+permalinkPattern: :year/:month/:day/:slug.html
 hidden: true
 index: false
 ---

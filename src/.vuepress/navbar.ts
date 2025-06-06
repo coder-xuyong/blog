@@ -7,7 +7,8 @@ export default navbar([
     prefix: "/posts/01.Java/", 
     children: [
       { text: 'JavaSE', link: '01.JavaSE/' },
-      { text: 'JavaEE', link: '02.JavaSE/' },
+      { text: 'JavaEE', link: '02.JavaEE/' },
+      { text: 'Frame', link: '03.Frame/' },
     ] 
   },
   { text: " 数据库 ", 
@@ -32,31 +33,31 @@ export default navbar([
       },
     ] 
   },
-  { text: "spring", icon: "https://docs.spring.io/spring-boot/_/img/favicon.ico", link: "/posts/java/spring/" },
-  {
-    text: "框架",
-    icon: "fa-solid fa-book",
-    prefix: "/posts/java/",
-    children: [{
-      text: "netty",
-      // icon: "fa-solid fa-book",
-      prefix: "netty/",
-      children: [
-        "Netty01-nio",
-        "Netty02-入门",
-        "Netty03-进阶",
-        "Netty04-优化与源码",
-      ]
-    }, {
-      text: "spring",
-      // icon: "pen-to-square",
-      prefix: "spring/",
-      children: [
-        "spring",
-      ]
-    }, { text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
-    ]
-  },
+  // { text: "spring", icon: "https://docs.spring.io/spring-boot/_/img/favicon.ico", link: "/posts/01.Java/03.Frame" },
+  // {
+  //   text: "框架",
+  //   icon: "fa-solid fa-book",
+  //   prefix: "/posts/java/",
+  //   children: [{
+  //     text: "netty",
+  //     // icon: "fa-solid fa-book",
+  //     prefix: "netty/",
+  //     children: [
+  //       "Netty01-nio",
+  //       "Netty02-入门",
+  //       "Netty03-进阶",
+  //       "Netty04-优化与源码",
+  //     ]
+  //   }, {
+  //     text: "spring",
+  //     // icon: "pen-to-square",
+  //     prefix: "spring/",
+  //     children: [
+  //       "spring",
+  //     ]
+  //   }, { text: "spring", icon: "fa-solid fa-glasses", link: "/posts/java/spring/" },
+  //   ]
+  // },
   {
     text: "AI相关",
     icon: "fa-solid fa-hexagon-nodes",

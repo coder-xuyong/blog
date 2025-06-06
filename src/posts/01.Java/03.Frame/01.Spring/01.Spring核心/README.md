@@ -1,5 +1,5 @@
 ---
-title: 2.Spring 核心
+title: 1.Spring 核心
 date: 2020-02-26 23:47:47
 categories:
   - Java
@@ -11,7 +11,7 @@ tags:
   - 框架
   - Spring
   - SpringBoot
-permalink: /pages/5e7c20/
+permalinkPattern: :year/:month/:day/:slug.html
 hidden: true
 index: false
 ---

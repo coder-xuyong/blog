@@ -1,5 +1,5 @@
 ---
-title: 5.Spring 集成
+title: 6.Spring 安全
 date: 2020-02-26 23:47:47
 categories:
   - Java
@@ -23,9 +23,7 @@ index: false
 
 ## 📖 内容
 
-- [Spring 集成缓存中间件](01.Spring集成缓存.md)
-- [Spring 集成定时任务中间件](02.Spring集成调度器.md)
-- [Spring 集成 Dubbo](03.Spring集成Dubbo.md)
+- [Spring 安全](01.SpringBoot之安全快速入门.md)
 
 ## 📚 资料
 
