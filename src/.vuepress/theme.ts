@@ -191,7 +191,7 @@ export default hopeTheme({
     vPre: true,
     highlighter:{      
       type: "shiki",
-      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','sql', 'xml', 'java', 'tex', 'cmd', 'properties', 'yaml','mermaid', 'python', 'kotlin', 'csharp', 'jsx', 'dart', 'php', 'less','scss', 'yml', 'groovy', 'powershell','c','cpp','ruby','batch','lua','http'],
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','sql', 'xml', 'java', 'tex', 'cmd', 'properties', 'yaml','mermaid', 'python', 'kotlin', 'csharp', 'jsx', 'dart', 'php', 'less','scss', 'yml', 'groovy', 'powershell','c','cpp','ruby','batch','lua','http','properties'],
       langAlias: { 
         mysql: 'sql',
       },

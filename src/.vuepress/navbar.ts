@@ -3,7 +3,7 @@ import { hopeTheme, navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   { text: " java ", 
-    icon: "https://www.java.com/favicon.ico", 
+    icon: "fa-brands fa-java", 
     prefix: "/posts/01.Java/", 
     children: [
       { text: 'JavaSE', link: '01.JavaSE/' },
