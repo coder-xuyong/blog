@@ -12,7 +12,7 @@ tags:
   - Spring
   - SpringBoot
   - 集成
-permalink: /pages/d6025b/
+permalinkPattern: :year/:month/:day/:slug.html
 hidden: true
 index: false
 ---
