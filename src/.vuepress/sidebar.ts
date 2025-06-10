@@ -34,7 +34,7 @@ export default sidebar({
      {
       text: "designPattern",
       icon: "fa-solid fa-square-binary",
-      prefix: "posts/03.designPattern/",
+      prefix: "posts/03.design/",
       collapsible: true,
       children: "structure",
     },

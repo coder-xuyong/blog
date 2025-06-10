@@ -1,6 +1,9 @@
 ---
 title: 0.Spring 综述
 date: 2020-02-26 23:48:06
+author: 
+    - name: 钝悟
+      url: https://dunwu.github.io/
 categories:
   - Java
   - 框架
