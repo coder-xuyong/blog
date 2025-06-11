@@ -109,7 +109,7 @@ function changeBanner() {
 
 
   }else{
-    console.log("document is undefined")
+    // console.log("document is undefined")
   }
 }
 

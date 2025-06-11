@@ -21,7 +21,7 @@ index: false
 #### 综合
 
 - [Spring 概述](01.Spring/00.Spring综合/01.Spring概述.md)
-- [SpringBoot 知识图谱](01.Spring/00.Spring综合/21.SpringBoot知识图谱.md)
+- [SpringBoot 知识图谱](01.Spring/00.Spring综合/02.SpringBoot知识图谱.md)
 - [SpringBoot 基本原理](01.Spring/00.Spring综合/22.SpringBoot基本原理.md)
 - [Spring 面试](01.Spring/00.Spring综合/99.Spring面试.md)
 

@@ -1,9 +1,6 @@
-import { defineClientConfig, useRoute } from "vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
-import { onMounted, onActivated,onDeactivated } from "vue";
-import { watchEffect } from 'vue'
-import { nextTick } from 'vue'
 import {changeBannerClient} from "./plugins/vuepress-plugin-hitokoto/common.js";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 // import "vuepress-theme-hope/presets/left-blog-info.scss";
@@ -43,18 +40,12 @@ export default defineClientConfig({
       let count = 0;
       const intervalId = setInterval(() => {
         // 执行你的任务
-        // console.log(`执行第 ${count + 1} 次`, Date.now());
         changeBannerClient();  
         count++;
-        
         if (count >= 10) {
           clearInterval(intervalId);
-          // console.log('任务完成');
         }
       }, 100);
-    //   setTimeout(() => {
-    //     changeBannerClient();  
-    //   }, 1000);
     })
   },
 
