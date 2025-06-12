@@ -24,7 +24,7 @@ index: false
 ## 📖 内容
 
 - [Spring 概述](01.Spring概述.md)
-- [SpringBoot 知识图谱](02.SpringBoot知识图谱.md)
+- [SpringBoot 知识图谱](02.SpringBoot知识清单.md)
 - [SpringBoot 基本原理](22.SpringBoot基本原理.md)
 - [Spring 面试](99.Spring面试.md)
 
