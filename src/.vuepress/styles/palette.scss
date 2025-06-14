@@ -13,6 +13,9 @@ $vp-c-bg: (
     background-size: 25cqmax;
     
     background-color: rgba(243, 246, 247, 0.75);;
+     [data-theme="dark"] & {
+        background-color: rgb(34, 34, 34);
+  }
 }
 @media (max-width: 719px) {
     .vp-footer-wrapper {

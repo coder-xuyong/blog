@@ -21,13 +21,15 @@ export default navbar([
         prefix: "03.关系型数据库/",
         children: [
           { text: "mysql", icon: "https://labs.mysql.com/common/themes/sakila/favicon.ico", link: "02.Mysql/" },
+          { text: "其他", icon: "https://sqlite.org/favicon.ico", link: "99.其他/" },
         ],
       },
       {
         text: "kv数据库",
         // icon: "pen-to-square",
         prefix: "05.KV数据库/",
-        children: [
+        children:
+         [
           { text: "redis", icon: "https://www.redis.net.cn/Application/Home/View/Public/img/icon.png", link: "01.Redis/" },
         ],
       },
