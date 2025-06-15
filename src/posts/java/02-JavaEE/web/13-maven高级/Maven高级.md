@@ -167,9 +167,7 @@ E. 删除原有案例项目tlias-web-management的pojo包【直接删除不要�
 **2. 创建Maven模块 tlias-utils，存放相关工具类**
 
 A. 创建一个正常的Maven模块，模块名tlias-utils
-
 <img src="./assets/image-20230113100500382.png" alt="image-20230113100500382" style="zoom: 60%;" />  <img src="./assets/image-20230113101816151.png" alt="image-20230113101816151" style="zoom:67%;" /> 
-
 
 
 B. 然后在 tlias-utils 中创建一个包 com.itheima.utils (和原来案例项目中的utils包名一致)
@@ -270,9 +268,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 ## 2. 继承与聚合
 
 在案例项目分模块开发之后啊，我们会看到tlias-pojo、tlias-utils、tlias-web-management中都引入了一个依赖 lombok 的依赖。我们在三个模块中分别配置了一次。
-
 <img src="./assets/image-20230113103714055.png" alt="image-20230113103714055" style="zoom:80%;" /> 
-
 如果是做一个大型的项目，这三个模块当中重复的依赖可能会很多很多。如果每一个 Maven 模块里面，我们都来单独的配置一次，功能虽然能实现，但是配置是比较**繁琐**的。
 
 而接下来我们要讲解的 Maven 的继承用来解决这问题的。
@@ -331,9 +327,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 ##### 2.1.1.2 实现
 
 1). 创建maven模块 tlias-parent ，该工程为父工程，设置打包方式pom(默认jar)。
-
 ​	<img src="./assets/image-20230113112712232.png" alt="image-20230113112712232" style="zoom:67%;" /> <img src="./assets/image-20230113112810295.png" alt="image-20230113112810295" style="zoom:67%;" /> 
-
 工程结构如下：
 
 ![image-20230113120517216](assets/image-20230113120517216.png) 
@@ -696,9 +690,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 ### 2.2 聚合
 
 分模块设计与开发之后啊，我们的项目被拆分为多个模块，而模块之间的关系，可能错综复杂。 那就比如我们当前的案例项目，结构如下（相对还是比较简单的）：
-
 <img src="./assets/image-20230113142520463.png" alt="image-20230113142520463" style="zoom:67%;" /> 
-
 此时，tlias-web-management 模块的父工程是 tlias-parent，该模块又依赖了tlias-pojo、tlias-utils模块。 那此时，我们要想将 tlias-web-management 模块打包，是比较繁琐的。因为在进行项目打包时，maven会从本地仓库中来查找tlias-parent父工程，以及它所依赖的模块tlias-pojo、tlias-utils，而本地仓库目前是没有这几个依赖的。
 
 所以，我们再打包tlias-web-management 模块前，需要将 tlias-parent、tlias-pojo、tlias-utils分别执行install生命周期安装到maven的本地仓库，然后再针对于 tlias-web-management 模块执行package进行打包操作。
@@ -708,9 +700,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 那此时，大家试想一下，如果开发一个大型项目，拆分的模块很多，模块之间的依赖关系错综复杂，那此时要进行项目的打包、安装操作，是非常繁琐的。 而我们接下来，要讲解的maven的聚合就是来解决这个问题的，通过maven的聚合就可以轻松实现项目的一键构建（清理、编译、测试、打包、安装等）。
 
 #### 2.2.1 介绍
-
 <img src="./assets/image-20230113151533948.png" alt="image-20230113151533948" style="zoom:80%;" /> 
-
 - **聚合：**将多个模块组织成一个整体，同时进行项目的构建。
 - **聚合工程：**一个不具有业务功能的“空”工程（有且仅有一个pom文件） 【PS：一般来说，继承关系中的父工程与聚合关系中的聚合工程是同一个】
 - **作用：**快速构建项目（无需根据依赖关系手动构建，直接在聚合工程上构建即可）
@@ -721,7 +711,7 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 在maven中，我们可以在聚合工程中通过 `<moudules>` 设置当前聚合工程所包含的子模块的名称。我们可以在 tlias-parent中，添加如下配置，来指定当前聚合工程，需要聚合的模块：
 
-```java
+```xml
 <!--聚合其他模块-->
 <modules>
     <module>../tlias-pojo</module>
@@ -783,15 +773,11 @@ E. 删除原有案例项目tlias-web-management的utils包【直接删除不要�
 
 
 假设现在有两个团队，A 和 B。 A 开发了一个模块 tlias-utils，模块开发完毕之后，将模块打成jar包，并安装到了A的本地仓库。
-
 <img src="./assets/image-20230113155325805.png" alt="image-20230113155325805" style="zoom:80%;" /> 
 
 
-
 那此时，该公司的B团队开发项目时，要想使用 tlias-utils 中提供的工具类，该怎么办呢？ 对于maven项目来说，是不是在pom.xml文件中引入 tlias-utils的坐标就可以了呢？
-
 <img src="./assets/image-20230113155657972.png" alt="image-20230113155657972" style="zoom:80%;" />  
-
 大家可以思考一下，当B团队在maven项目的pom.xml配置文件中引入了依赖的坐标之后，maven是如何查找这个依赖的？ 查找顺序为：
 
 1). 本地仓库：本地仓库中是没有这个依赖jar包的。

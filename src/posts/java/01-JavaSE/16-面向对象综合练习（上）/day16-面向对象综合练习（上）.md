@@ -111,7 +111,7 @@ jFrame.setVisible(true);
 
    注意事项：
 
-​	jFrame.setVisible(true);必须要写在最后一行。
+​	`jFrame.setVisible(true);`必须要写在最后一行。
 
 ## 6. 利用继承简化代码
 
@@ -311,7 +311,7 @@ this.setJMenuBar(jMenuBar);
 
 #### 8.4.1 打乱数组中数据的练习
 
-​	int[] tempArr = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+​	`int[] tempArr = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};`
 
 ​	要求：打乱一维数组中的数据，并按照4个一组的方式添加到二维数组中。
 
