@@ -1,7 +1,8 @@
 ﻿---
-title: Windows 常用操作
-icon: pen-to-square
+title: Windows 工作常用操作
+# icon: pen-to-square
 date: 2023-06-01
+order: 1
 lastUpdated: true
 category:
   - java
@@ -11,7 +12,7 @@ tag:
   - spring
   - springboot
   - shell
-
+permalinkPattern: :year/:month/:day/:slug.html
 ---
 
 Windows 工作中遇到的问题
