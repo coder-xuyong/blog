@@ -1,17 +1,14 @@
 ---
-title: modbus 使用
-icon: pen-to-square
+title: modbus 基础
+# icon: pen-to-square
 date: 2023-06-05
 lastUpdated: true
 category:
   - java
 tag:
   - modbus
+permalinkPattern: :year/:month/:day/:slug.html
 ---
-
-整理modbus的使用方法
-
-<!-- more -->
 
 
 
@@ -75,7 +72,35 @@ Modbus-RTU协议只需要看懂功能码0x03、0x06、0x10这三个基本的就�
 做个基础了解
 ### 5.1.帧结构
 
+## 6.以太网（modbus  tcp/ip）
+对于Modbus TCP而言，主站通常称为Client，从站称为Server；而对于Modbus RTU和Modbus ASCII来说，主站是Master，从站是Slave。
 
+　　ModbusTCP的数据帧可分为两部分：ADU=MBAP+PDU = MBAP + 功能码 + 数据域，MBAP  7byte，功能码1byte，数据域不确定，由具体功能决定。
+
+### 3.1.modbus tcp/ip 协议
+Modbus设备可分为主站(poll)和从站(slave)。主站只有一个，从站有多个，主站向各从站发送请求帧，从站给予响应。在使用TCP通信时，主站为client端，主动建立连接；从站为server端，等待连接。
+
+- 主站请求：功能码+数据
+- 从站正常响应：请求功能码+响应数据
+- 从站异常响应：异常功能码+异常码，其中异常功能码即将请求功能码的最高有效位置1，异常码指示差错类型
+- 注意：需要超时管理机制，避免无期限的等待可能不出现的应答
+　　　　
+
+
+### 3.2.通信过程
+IANA（Internet Assigned Numbers Authority，互联网编号分配管理机构）给Modbus协议赋予TCP端口号为502，这是目前在仪表与自动化行业中唯一分配到的端口号。
+
+A、connect 建立TCP连接
+
+B、准备Modbus报文
+
+C、使用send命令发送报文
+
+D、在同一连接下等待应答
+
+E、使用recv命令读取报文，完成一次数据交换
+
+F、通信任务结束时，关闭TCP连接
 ## 使用
 查看：https://github.com/MangoAutomation/modbus4j
 
