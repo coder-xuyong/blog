@@ -1,5 +1,5 @@
 ---
-title: Java 构建
+title: Java build
 date: 2020-08-04 15:20:54
 categories:
   - Java
