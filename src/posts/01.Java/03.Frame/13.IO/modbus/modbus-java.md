@@ -3,6 +3,7 @@ title: java 整合 modbus
 # icon: pen-to-square
 date: 2025-06-22
 lastUpdated: true
+order: 2
 category:
   - java
 tag:

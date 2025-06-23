@@ -2,6 +2,7 @@
 title: modbus 基础
 # icon: pen-to-square
 date: 2023-06-05
+order: 1
 lastUpdated: true
 category:
   - java
