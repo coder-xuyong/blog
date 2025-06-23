@@ -39,15 +39,15 @@ public class ModbusServer {
                 Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
         threadPoolExecutor.execute(new Handler());
-        try {
-            boolean flag = threadPoolExecutor.awaitTermination(5, TimeUnit.SECONDS);
-            if (flag){
-                log.info("线程池关闭成功");
-            }
-        } catch (InterruptedException e) {
-            log.error("线程池关闭异常：{}",e.toString());
-            e.printStackTrace();
-        }
+        // try {
+        //     boolean flag = threadPoolExecutor.awaitTermination(5, TimeUnit.SECONDS);
+        //     if (flag){
+        //         log.info("线程池关闭成功");
+        //     }
+        // } catch (InterruptedException e) {
+        //     log.error("线程池关闭异常：{}",e.toString());
+        //     e.printStackTrace();
+        // }
     }
 
     public static TcpSlave initModbusServer() {
