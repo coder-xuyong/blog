@@ -2,6 +2,7 @@ import { onClickOutside, useStorage } from "@vueuse/core";
 import { Transition, computed, defineComponent, h, onMounted, ref, shallowRef, } from "vue";
 import { ClientOnly, usePageLang } from "vuepress/client";
 import {changeBannerClient} from "./../vuepress-plugin-hitokoto/common.js";
+// import { useDarkMode } from "vuepress-theme-hope/client";
 import "./bing-hero-background.scss";
 const bingStorage = useStorage("bing-image", {
     index: 0,
@@ -16,6 +17,7 @@ export default defineComponent({
      * },
      */
     setup() {
+        // const isDarkMode = useDarkMode();
         const lang = usePageLang();
         const bingInfo = shallowRef();
         const showInfo = ref(false);
@@ -78,8 +80,6 @@ export default defineComponent({
             //     bingStorage.value.data = res;
             // });
             changeBannerClient();
-
-    
         });
         return () => {
             const { title, headline, url, backstage, quickFact, copyright } = currentWallpaper.value ?? {};

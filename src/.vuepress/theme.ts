@@ -3,6 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 // import { cut } from 'nodejs-jieba'
 export default hopeTheme({
+  darkmode: "toggle", // 或 "toggle", "auto", "enable", "disable"
   hostname: "https://coder-xuyong.github.io/blog/",
   author: {
     name: "xuyong",
