@@ -79,7 +79,7 @@ export default defineComponent({
             // void getImage().then((res) => {
             //     bingStorage.value.data = res;
             // });
-            changeBannerClient();
+            // changeBannerClient();
         });
         return () => {
             const { title, headline, url, backstage, quickFact, copyright } = currentWallpaper.value ?? {};

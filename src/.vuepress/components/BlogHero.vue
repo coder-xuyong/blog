@@ -23,7 +23,7 @@ import BingHeroBackground from "../plugins/vuepress-plugin-bingbackground/BingHe
 <template>
     <BlogHero>
         <template #info="info" >
-            <BingHeroBackground />
+            <!-- <BingHeroBackground /> -->
             <HitokotoBlogHero v-bind="info" />
         </template>
     </BlogHero>
