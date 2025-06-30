@@ -11,7 +11,7 @@ import "vuepress-theme-hope/presets/bounce-icon.scss";
 //隐藏侧边栏图标
 // import "vuepress-theme-hope/presets/hide-sidebar-icon.scss";
 // 为所有 hr 元素添加驾驶的车图标
-import "vuepress-theme-hope/presets/hr-driving-car.scss";
+// import "vuepress-theme-hope/presets/hr-driving-car.scss";
 export default defineClientConfig({
   setup() {
     setupRunningTimeFooter(

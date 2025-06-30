@@ -40,10 +40,10 @@ export default defineUserConfig({
   ],
 
 alias: {
-    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
-      __dirname,
-      "./components/BlogHero.vue",
-    ),
+    // "@theme-hope/modules/blog/components/BlogHero": path.resolve(
+    //   __dirname,
+    //   "./components/BlogHero.vue",
+    // ),
     
     // "@DemoComponent": path.resolve(__dirname, "components/Demo.vue"),
     // "@theme-hope/components/PageFooter": path.resolve(
