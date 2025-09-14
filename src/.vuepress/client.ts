@@ -34,19 +34,19 @@ export default defineClientConfig({
       // return () =>changeBannerClient();
   },
   
-  // enhance({ router }) {
-  //   router.afterEach(() => {
+  enhance({ router }) {
+    router.afterEach(() => {
 
-  //     let count = 0;
-  //     const intervalId = setInterval(() => {
-  //       // 执行你的任务
-  //       changeBannerClient();  
-  //       count++;
-  //       if (count >= 10) {
-  //         clearInterval(intervalId);
-  //       }
-  //     }, 100);
-  //   })
-  // },
+      let count = 0;
+      const intervalId = setInterval(() => {
+        // 执行你的任务
+        changeBannerClient();  
+        count++;
+        if (count >= 10) {
+          clearInterval(intervalId);
+        }
+      }, 100);
+    })
+  },
 
 });
